@@ -1,43 +1,24 @@
-<html lang="en">
+<%- include('partials/header'); -%>
+  <div class="form-card">
+    <div class="log">
+      <h2> <a href="/Login" class="login1">Login</a></h2>
+      <h2><a href="/signup" class="signup1">Signup</a></h2>
+    </div>
+    <form action="/signup" class="form-login">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JOB TRACKER</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-
-<body>
-  <nav>
-    <h1><a href="/">JOB TRACKER</a></h1>
-    <ul>
-      <% if (user) { %>
-        <li>Welcome, <%= user.firstname %>
-            <%= user.lastname %>
-        </li>
-        <li><a href="/user-profile">My profile</a></li>
-        <li><a href="/logout">Log out</a></li>
-        <% } else { %>
-          <li><a href="/signup" class="btn">Sign up</a></li>
-          <% } %>
-    </ul>
-  </nav>
-
-
-  <form action="/signup">
-    <h2>Login</h2>
-    <label for="email">Email</label>
-    <input type="text" name="email" />
-    <div class="email error"></div>
-    <label for="password">Password</label>
-    <input type="password" name="password" />
-    <div class="password error"></div>
-    <button>login</button>
-    <p class="notregistered">
-      Not registered yet? <a href="/signup">Create an account</a>
-    </p>
-  </form>
-
+      <label for="email" class="email">Email</label>
+      <input type="text" name="email" class="email-input" placeholder=" Enter your email" />
+      <div class="email error"></div>
+      <label for="password" class="password">Password</label>
+      <input type="password" name="password" class="password-input" placeholder="Password" />
+      <div class="password error"></div>
+      <button class="btn-login-push">Login</button>
+      <p class="notregistered">
+        Not registered yet?
+        <a href="/signup">Create an account</a>
+      </p>
+    </form>
+  </div>
   <%- include('partials/footer'); -%>
 
     <script>

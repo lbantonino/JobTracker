@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 // const dbURI = process.env.MONGODB_URI || process.env.DB_URI
+const CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY
+const CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET
+const CLOUDINARY_CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME
+const CLOUDINARY_URL = process.env.CLOUDINARY_URL
 const dbURI = process.env.DB_URI
 
 const authRoutes = require('./routes/authRoutes');
