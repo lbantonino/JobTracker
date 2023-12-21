@@ -1,0 +1,191 @@
+<%- include('partials/header'); -%>
+
+    <% if (job) { %>
+        <% if (updateJob) { %>
+            <section>
+                <form action="/job/update/<%= job._id %>" method="PUT" enctype="multipart/form-data">
+                    <h2>Update</h2>
+
+                    <label for="jobTitle">Job title</label>
+                    <input type="text" name="jobTitle" value="<%= job.jobTitle %>" required>
+                    <div class="jobTitle error"></div>
+
+                    <label for="company">Company</label>
+                    <input type="text" name="company" value="<%= job.company %>" required>
+                    <div class="company error"></div>
+
+                    <label for="website">Website</label>
+                    <input type="text" name="website" value="<%= job.website %>" required>
+                    <div class="website error"></div>
+
+                    <h3>Employer's contact</h3>
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" value="<%= job.nameContact %>">
+
+                    <label for="emailContact">Email of contact</label>
+                    <input type="text" name="emailContact" value="<%= job.emailContact%>">
+                    <div class="email error"></div>
+
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" value="<%= job.phone %>">
+
+                    <label for="address">Address</label>
+                    <input type="text" name="address" value="<%= job.Address %>">
+
+                    <label for="origin">Origin</label>
+                    <select name="origin" id="origin" required>
+                        <option value="spontaneous">Spontaneous application</option>
+                        <option value="job offer">Job offer</option>
+                    </select>
+                    <div class="origin error"></div>
+
+                    <label for="statusJob">Status</label>
+                    <select name="statusJob" id="statusJob" required>
+                        <option value="interested">Interested</option>
+                        <option value="cv sent">CV sent</option>
+                        <option value="negative">Negative</option>
+                        <option value="interview">Interview</option>
+                    </select>
+                    <div class="status error"></div>
+
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10"><%= job.comments %></textarea>
+
+                    <button class="update" type="submit" data-id="<%= job._id %>">Save</button>
+                </form>
+            </section>
+            <% } else { %>
+                <section>
+                    <h2>
+                        <%= job.jobTitle %>
+                    </h2>
+                    <h3>
+                        <%= job.company %>
+                    </h3>
+                    <p>
+                        <%= job.website %>
+                    </p>
+                    <p>
+                        <%= job.nameContact %>
+                    </p>
+                    <p>
+                        <%= job.emailContact %>
+                    </p>
+                    <p>
+                        <%= job.phone %>
+                    </p>
+                    <p>
+                        <%= job.Address %>
+                    </p>
+                    <p>
+                        <%= job.origin %>
+                    </p>
+                    <p>
+                        <%= job.statusJob %>
+                    </p>
+                    <p>
+                        <%= job.comments %>
+                    </p>
+
+
+                    <a href="/list-jobs">Back to list</a>
+                    <a href="/job/update/<%= job._id %>">Edit</a>
+                </section>
+                <% } %>
+                    <% } %>
+
+                        <%- include('partials/footer'); -%>
+
+                            <script>
+                                // update job by try fetch
+
+                                const form = document.querySelector('form');
+                                const jobTitleError = document.querySelector('.jobTitle.error');
+                                const companyError = document.querySelector('.company.error');
+                                const websiteError = document.querySelector('.website.error');
+                                const emailError = document.querySelector('.email.error');
+                                const originError = document.querySelector('.origin.error');
+                                const statusError = document.querySelector('.status.error');
+                                const updateBtn = document.querySelector('.update');
+
+                                document.addEventListener('submit', async (e) => {
+                                    e.preventDefault();
+
+
+                                    // reset errors
+                                    jobTitleError.textContent = '';
+                                    companyError.textContent = '';
+                                    websiteError.textContent = '';
+                                    emailError.textContent = '';
+                                    originError.textContent = '';
+                                    statusError.textContent = '';
+
+                                    // get values
+                                    const jobTitle = form.jobTitle.value;
+                                    const company = form.company.value;
+                                    const website = form.website.value;
+                                    const name = form.name.value;
+                                    const emailContact = form.emailContact.value;
+                                    const phone = form.phone.value;
+                                    const address = form.address.value;
+                                    const origin = form.origin.value;
+                                    const statusJob = form.statusJob.value;
+                                    const comments = form.comments.value;
+                                    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+
+
+                                    if (jobTitle === '' || website === '' || company === '' || origin === '' || statusJob === '') {
+                                        jobTitleError.textContent = 'Please fill out the job title';
+                                        websiteError.textContent = 'Please fill out the website';
+                                        emailError.textContent = 'Please enter a valid email';
+                                        originError.textContent = 'Please fill out the origin';
+                                        statusError.textContent = 'Please fill out the status';
+
+                                    }
+                                    if (emailContact && !emailRegex.test(emailContact)) {
+                                        emailError.textContent = 'Please enter a valid email';
+                                    }
+
+                                    else {
+                                        let infoJob = {
+                                            jobTitle,
+                                            company,
+                                            website,
+                                            nameContact: name,
+                                            emailContact,
+                                            phone,
+                                            Address: address,
+                                            origin,
+                                            statusJob: statusJob,
+                                            comments
+                                        }
+                                        try {
+                                            const res = await fetch(`/job/update/${updateBtn.dataset.id}`, {
+                                                method: 'PUT',
+                                                body: JSON.stringify(infoJob),
+                                                headers: { 'Content-Type': 'application/json' }
+                                            });
+                                            const data = await res.json();
+                                            console.log(data);
+                                            if (data.errors) {
+                                                jobTitleError.textContent = data.errors.jobTitle;
+                                                companyError.textContent = data.errors.company;
+                                                websiteError.textContent = data.errors.website;
+                                                emailError.textContent = data.errors.emailContact;
+                                                originError.textContent = data.errors.origin;
+                                                statusError.textContent = data.errors.statusJob;
+                                            }
+                                            else {
+
+                                                location.assign(`/list-jobs`);
+                                            }
+                                        }
+                                        catch (err) {
+                                            console.log(err);
+                                        }
+                                    }
+                                });
+
+                            </script>

@@ -1,0 +1,143 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOB TRACKER</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <nav>
+    <h1><a href="/">JOB TRACKER</a></h1>
+    <ul>
+      <% if (user) { %>
+        <li>Welcome, <%= user.firstname %>
+            <%= user.lastname %>
+        </li>
+        <li><a href="/user-profile">My profile</a></li>
+        <li><a href="/logout">Log out</a></li>
+        <% } else { %>
+          <li><a href="/login">Log in</a></li>
+
+          <% } %>
+    </ul>
+  </nav>
+
+
+  <form>
+    <h2>Register</h2>
+
+    <label for="firstname">First name</label>
+    <input type="text" name="firstname" required>
+    <div class="firstname error"></div>
+
+    <label for="lastname">Last name</label>
+    <input type="text" name="lastname" required>
+    <div class="lastname error"></div>
+
+    <label for="email">Email</label>
+    <input type="text" name="email" required>
+    <div class="email error"></div>
+
+    <label for="github">GitHub</label>
+    <input type="text" name="github">
+
+    <!-- <label for="profilpicture">Profile picture</label>
+    <input type="file" name="profilpicture"> -->
+
+    <label for="cv">CV (pdf)</label>
+    <input type="text" name="cv" placeholder="Enter a link for your cv ( ex: Google Drive)">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" required>
+    <div class="password error"></div>
+
+    <label for="confirmpassword">Confirm password</label>
+    <input type="password" name="confirmpassword" required>
+    <div class="confirmpassword error"></div>
+
+    <button>Register</button>
+  </form>
+
+  <%- include('partials/footer'); -%>
+
+    <script>
+      const form = document.querySelector('form');
+      const emailError = document.querySelector('.email.error');
+      const passwordError = document.querySelector('.password.error');
+      const confirmPasswordError = document.querySelector('.confirmpassword.error');
+      const firstnameError = document.querySelector('.firstname.error');
+      const lastnameError = document.querySelector('.lastname.error');
+
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // reset errors
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        confirmPasswordError.textContent = '';
+        firstnameError.textContent = '';
+        lastnameError.textContent = '';
+
+        // get values
+        const email = form.email.value;
+        const password = form.password.value;
+        const confirmpassword = form.confirmpassword.value;
+        const firstname = form.firstname.value
+        const lastname = form.lastname.value
+        const github = form.github.value
+        // const profilpicture = form.profilpicture.value
+        const cv = form.cv.value
+
+
+        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if (password !== confirmpassword || !emailRegex.test(email) || firstname === '' || lastname === '') {
+          if (password !== confirmpassword) {
+            confirmPasswordError.textContent = 'Passwords do not match';
+          }
+          if (!emailRegex.test(email)) {
+            emailError.textContent = 'Email is not valid';
+          }
+          if (firstname === '') {
+            firstnameError.textContent = 'First name is required';
+          }
+          if (lastname === '') {
+            lastnameError.textContent = 'Last name is required';
+          }
+        } else {
+          let infoUsers = {
+            firstname,
+            lastname,
+            email,
+            password,
+            linkedin: "",
+            github,
+            profilpicture: "",
+            cv
+          }
+          try {
+            const res = await fetch('/signup', {
+              method: 'POST',
+              body: JSON.stringify(infoUsers),
+              headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await res.json();
+            console.log(data);
+            if (data.errors) {
+              emailError.textContent = data.errors.email;
+              passwordError.textContent = data.errors.password;
+            }
+            if (data.user) {
+              location.assign('/');
+            }
+
+          }
+          catch (err) {
+            console.log(err);
+          }
+        }
+
+      });
+    </script>T
