@@ -8,6 +8,7 @@ const CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET
 const CLOUDINARY_CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME
 const CLOUDINARY_URL = process.env.CLOUDINARY_URL
 const dbURI = process.env.DB_URI
+const cloudinary = require('cloudinary').v2;
 
 const authRoutes = require('./routes/authRoutes');
 const jobsRouter = require('./routes/jobsRoutes');
