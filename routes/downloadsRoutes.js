@@ -13,7 +13,7 @@ router.post('/upload', upload.single('profile-file'), async (req, res) => {
         const result = await cloudinary.uploader.upload(req.file.path);
         console.log(result);
         // Ici, tu peux utiliser result.secure_url comme nécessaire
-        // ... rest of your code, comme l'appel à userController.downloadImage
+        req.body.image = result.secure_url;
         userController.downloadImage(req, res);
     } catch (error) {
         console.error('Error in image upload route:', error);
