@@ -46,7 +46,7 @@ nav {
 nav .logo a {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
-  color: #0a56a7;
+  color: #4d209b;
   font-weight: 500;
   letter-spacing: -1px;
 }
@@ -58,7 +58,7 @@ nav .update-profile {
   font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
-  color: #0a56a7;
+  color: #4d209b;
 }
 nav .create-job {
   font-size: 25px;
@@ -67,26 +67,40 @@ nav .create-job {
   color: #fff;
 }
 nav .pp {
-  width: 40px;
+  width: auto;
+}
+nav .pp a {
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 300;
+}
+nav .pp a:hover {
+  cursor: pointer;
+  color: #644cff;
 }
 nav ul {
   display: flex;
   align-items: center;
 }
-nav ul li {
+nav ul .circle-2 {
   margin-left: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #ba79ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-nav ul li a {
+nav ul .circle-2 a {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 26px;
   color: #fff;
-  font-weight: 300;
-  padding: 5px 15px;
-  border-radius: 10px;
-  background-color: #0a56a7;
+  font-weight: 700;
 }
-nav ul li a:hover {
-  background-color: #4ca2ff;
+nav ul .circle-2:hover {
+  background-color: #644cff;
+  cursor: pointer;
 }
 
 footer {
@@ -130,7 +144,7 @@ footer div {
   width: 310px;
 }
 .headings .btn-btn .btnlog {
-  background-color: #0a56a7;
+  background-color: #4d209b;
   border-radius: 8px;
   font-weight: 300;
   font-size: 17px;
@@ -141,7 +155,7 @@ footer div {
   align-items: center;
 }
 .headings .btn-btn .btnlog:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   color: #fff;
   cursor: pointer;
 }
@@ -181,7 +195,7 @@ footer div {
   margin-bottom: 70px;
   font-weight: 700;
   font-size: 30px;
-  color: #0a56a7;
+  color: #4d209b;
 }
 .form-card .form-square .log .signup1 {
   font-weight: 300;
@@ -191,8 +205,8 @@ footer div {
   border-bottom: 1px solid rgba(255, 255, 255, 0.351);
 }
 .form-card .form-square .log .signup1:hover {
-  color: #4ca2ff;
-  border-bottom: 1px solid #4ca2ff;
+  color: #644cff;
+  border-bottom: 1px solid #644cff;
   cursor: pointer;
 }
 .form-card .form-square .form-login {
@@ -209,17 +223,17 @@ footer div {
   height: 50px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   padding: 0 10px;
   outline: none;
   color: white;
 }
 .form-card .form-square .form-login input:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
 }
 .form-card .form-square .form-login input:placeholder-shown {
-  color: #0a56a7;
+  color: #4d209b;
   font-size: 17px;
   font-weight: 300;
 }
@@ -229,7 +243,7 @@ footer div {
 .form-card .form-square .form-login .btn-login-push {
   width: 270px;
   height: 50px;
-  background-color: #0a56a7;
+  background-color: #4d209b;
   border-radius: 5px;
   font-weight: 300;
   font-size: 19px;
@@ -242,7 +256,7 @@ footer div {
   margin-bottom: 20px;
 }
 .form-card .form-square .form-login .btn-login-push:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   cursor: pointer;
 }
 .form-card .form-square .form-login .notregistered {
@@ -252,11 +266,11 @@ footer div {
   margin-bottom: 20px;
 }
 .form-card .form-square .form-login .notregistered a {
-  color: #0a56a7;
+  color: #4d209b;
   text-decoration: underline;
 }
 .form-card .form-square .form-login .notregistered a:hover {
-  color: #4ca2ff;
+  color: #644cff;
   cursor: pointer;
 }
 .form-card .form-square .form-login1 {
@@ -273,17 +287,17 @@ footer div {
   height: 45px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   padding: 0 10px;
   outline: none;
   color: white;
 }
 .form-card .form-square .form-login1 input:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
 }
 .form-card .form-square .form-login1 input:placeholder-shown {
-  color: #0a56a7;
+  color: #4d209b;
   font-size: 14px;
   font-weight: 300;
 }
@@ -293,7 +307,7 @@ footer div {
 .form-card .form-square .form-login1 .btn-login-push {
   width: 270px;
   height: 50px;
-  background-color: #0a56a7;
+  background-color: #4d209b;
   border-radius: 5px;
   font-weight: 300;
   font-size: 19px;
@@ -306,7 +320,7 @@ footer div {
   margin-bottom: 20px;
 }
 .form-card .form-square .form-login1 .btn-login-push:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   cursor: pointer;
 }
 .form-card .form-square .form-login1 .notregistered {
@@ -316,24 +330,14 @@ footer div {
   margin-bottom: 20px;
 }
 .form-card .form-square .form-login1 .notregistered a {
-  color: #0a56a7;
+  color: #4d209b;
   text-decoration: underline;
 }
 .form-card .form-square .form-login1 .notregistered a:hover {
-  color: #4ca2ff;
+  color: #644cff;
   cursor: pointer;
 }
 
-.user-profile {
-  height: 65vh;
-  width: 100vw;
-  padding: 0 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
 .user-profile .arrow-link {
   position: absolute;
   transform: translateY(-10px);
@@ -349,38 +353,43 @@ footer div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 1000px;
+  width: 100vw;
+  height: 60vh;
+  padding: 0 40px;
+  border-radius: 20px;
 }
 .user-profile .card-profile .glob-infos {
-  width: 800px;
-  height: 300px;
+  width: 860px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.user-profile .card-profile .glob-infos .infos {
+  width: 100%;
+  height: 109%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  gap: 50px;
+  background-color: rgba(33, 91, 192, 0.1254901961);
+  border-radius: 20px;
+  border: 1px solid #4d209b;
+  box-shadow: 8px 5px 17px rgba(0, 0, 0, 0.22);
+  padding: 20px;
+  position: relative;
 }
-.user-profile .card-profile .glob-infos .photo {
-  width: 350px;
-  height: 300px;
-  margin-left: 30px;
-}
-.user-profile .card-profile .glob-infos .photo .pp-user {
-  width: 86%;
-}
-.user-profile .card-profile .glob-infos .infos {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: column;
-}
-.user-profile .card-profile .glob-infos .infos h1 {
-  font-size: 25px;
-  color: #fff;
-  margin-bottom: 20px;
-  font-weight: 500;
-  padding: 5px 0px;
+.user-profile .card-profile .glob-infos .infos .usr h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4ca2ff;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  padding: 10px 30px;
+  border: 0.0625rem solid #0a56a7;
+  border-radius: 5px;
+  text-align: center;
 }
 .user-profile .card-profile .glob-infos .infos p {
   font-size: 16px;
@@ -390,44 +399,45 @@ footer div {
 }
 .user-profile .card-profile .glob-infos .infos p span {
   font-weight: 300;
-  color: #0a56a7;
+  color: #644cff;
 }
 .user-profile .card-profile .glob-infos .infos p span a {
   font-size: 16px;
   font-weight: 300;
-  color: #0a56a7;
+  color: #644cff;
+}
+.user-profile .card-profile .glob-infos .infos h2 {
+  position: absolute;
+  bottom: 50px;
+  right: 42%;
 }
 .user-profile .card-profile .glob-infos .infos h2 .update-btn {
   font-size: 16px;
   font-weight: 300;
   color: #fff;
-  background-color: rgb(25, 194, 34);
-  padding: 5px 15px;
-  border-radius: 3px;
+  background-color: #1c41b1;
+  padding: 11px 18px;
+  border-radius: 5px;
 }
 .user-profile .card-profile .glob-infos .infos h2 .update-btn:hover {
-  background-color: rgb(123, 255, 130);
-  color: gray;
+  background-color: #2b59e2;
+  color: white;
   cursor: pointer;
 }
 .user-profile .card-profile .glob-infos .infos h2 .add-btn {
   font-size: 16px;
   font-weight: 300;
   color: #fff;
-  background-color: #1c41b1;
+  background-color: #2c1f8f;
   padding: 5px 15px;
   border-radius: 3px;
 }
 .user-profile .card-profile .glob-infos .infos h2 .add-btn:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   cursor: pointer;
 }
-.user-profile .card-profile .glob-infos .infos .h2 {
-  margin-top: 25px;
-  margin-bottom: 30px;
-}
 .user-profile .card-profile .btn-btm {
-  transform: translateY(80px);
+  transform: translateY(50px);
   width: 800px;
   display: flex;
   justify-content: center;
@@ -440,7 +450,7 @@ footer div {
 }
 .user-profile .card-profile .btn-btm li {
   list-style: none;
-  padding: 7px 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   background-color: rgba(20, 44, 75, 0.712);
   display: flex;
@@ -454,7 +464,7 @@ footer div {
 }
 .user-profile .card-profile .btn-btm button {
   list-style: none;
-  padding: 7px 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   background-color: #d63c3c;
   display: flex;
@@ -503,7 +513,7 @@ footer div {
   margin-bottom: 30px;
 }
 .download-image .form-login2 .upload-picture label {
-  color: #0a56a7;
+  color: #4d209b;
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 50px;
@@ -514,7 +524,7 @@ footer div {
   height: 25px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   outline: none;
   color: white;
@@ -529,7 +539,7 @@ footer div {
 .download-image .form-login2 .btn-submit input {
   width: 300px;
   height: 50px;
-  background-color: #0a56a7;
+  background-color: #4d209b;
   border-radius: 5px;
   font-weight: 300;
   font-size: 19px;
@@ -538,7 +548,7 @@ footer div {
   color: #fff;
 }
 .download-image .form-login2 .btn-submit input:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   cursor: pointer;
 }
 
@@ -595,17 +605,17 @@ footer div {
   height: 50px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   padding: 0 10px;
   outline: none;
   color: white;
 }
 .form-create .info-job .info1 input:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
 }
 .form-create .info-job .info1 input:placeholder-shown {
-  color: #0a56a7;
+  color: #4d209b;
   font-size: 17px;
   font-weight: 300;
 }
@@ -623,17 +633,17 @@ footer div {
   height: 50px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   padding: 0 10px;
   outline: none;
   color: white;
 }
 .form-create .info-job .info2 input:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
 }
 .form-create .info-job .info2 input:placeholder-shown {
-  color: #0a56a7;
+  color: #4d209b;
   font-size: 17px;
   font-weight: 300;
 }
@@ -650,7 +660,7 @@ footer div {
   height: 50px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   padding: 0 10px;
   outline: none;
@@ -659,16 +669,16 @@ footer div {
   font-weight: 300;
 }
 .form-create .info-job .info3 select:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
 }
 .form-create .info-job .info3 input:placeholder-shown {
-  color: #0a56a7;
+  color: #4d209b;
   font-size: 17px;
   font-weight: 300;
 }
 .form-create .info-job .info3 #comments {
   width: 270px;
-  border: 1px solid #0a56a7;
+  border: 1px solid #4d209b;
   border-radius: 5px;
   background-color: #03050c;
   color: white;
@@ -676,11 +686,11 @@ footer div {
   font-size: 13px;
 }
 .form-create .info-job .info3 #comments:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
   outline: none;
 }
 .form-create .info-job .info3 #comments:placeholder-shown {
-  color: #0a56a7;
+  color: #4d209b;
   font-weight: 300;
   font-size: 13px;
 }
@@ -691,7 +701,7 @@ footer div {
 .form-create .btn-submit button {
   width: 270px;
   height: 50px;
-  background-color: #0a56a7;
+  background-color: #4d209b;
   border-radius: 5px;
   font-weight: 300;
   font-size: 19px;
@@ -700,7 +710,7 @@ footer div {
   color: #fff;
 }
 .form-create .btn-submit button:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   cursor: pointer;
 }
 
@@ -728,7 +738,7 @@ footer div {
   height: 30px;
   background-color: transparent;
   border: transparent;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   padding: 0 10px;
   outline: none;
@@ -737,7 +747,7 @@ footer div {
   font-weight: 300;
 }
 .list-jobs .filtres .form-filtre select:focus {
-  border: 1px solid #4ca2ff;
+  border: 1px solid #644cff;
 }
 .list-jobs .filtres .form-filtre button {
   margin-top: 10px;
@@ -746,7 +756,7 @@ footer div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0a56a7;
+  background-color: #4d209b;
   border-radius: 5px;
   font-weight: 100;
   font-size: 15px;
@@ -755,7 +765,7 @@ footer div {
   color: #fff;
 }
 .list-jobs .filtres .form-filtre button:hover {
-  background-color: #4ca2ff;
+  background-color: #644cff;
   cursor: pointer;
 }
 
@@ -806,7 +816,7 @@ footer div {
   background-color: rgba(33, 91, 192, 0.1254901961);
   color: #fff;
   border-radius: 10px;
-  border: 1px solid #0a56a7;
+  border: 1px solid #4d209b;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -878,7 +888,7 @@ footer div {
   height: 90%;
   background-color: rgba(33, 91, 192, 0.0588235294);
   border-radius: 20px;
-  border: 2px solid #0a56a7;
+  border: 2px solid #4d209b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -896,11 +906,11 @@ footer div {
 .section-detail .detail .card .infos1 h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #4ca2ff;
+  color: #644cff;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
   padding: 10px 30px;
-  border: 0.0625rem solid #0a56a7;
+  border: 0.0625rem solid #4d209b;
   border-radius: 5px;
   text-align: center;
 }
@@ -921,7 +931,7 @@ footer div {
 .section-detail .detail .card .infos p {
   font-size: 0.85rem;
   font-weight: 100;
-  color: #4ca2ff;
+  color: #644cff;
   letter-spacing: 0.5px;
   padding: 0 0px 10px;
   font-weight: 300;
@@ -933,7 +943,7 @@ footer div {
 .section-detail .detail .update {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #1c41b1;
+  background-color: #2c1f8f;
   color: #fff;
   font-size: 1rem;
   font-weight: 300;

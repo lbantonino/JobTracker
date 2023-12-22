@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://job-tracker-rho.vercel.app">
 
   <title>JOB TRACKER</title>
   <link rel="stylesheet" href="styles/styles.css">
@@ -15,13 +14,17 @@
     <ul>
       <% if (user) { %>
         <div class="pp">
-          <img src="<%= user.profilpicture %>" alt="">
-          <!-- <img src="../assests/photo-avatar-profil.png" alt=""> -->
+          <li class="profile-user"><a href="/user-profile">
+              My Profile </a>
+          </li>
         </div>
-        <li><a href="/user-profile" class="userprofile">
-            <%= user.firstname %>
-          </a></li>
-
+        <div class="circle-2">
+          <li class="circle">
+            <a href="/user-profile" class="userprofile">
+              <%= user.firstname.slice(0, 1).toUpperCase() %>
+            </a>
+          </li>
+        </div>
 
         <% } else { %>
           <!-- <li><a href="/login">Log in</a></li>
@@ -29,3 +32,30 @@
           <% } %>
     </ul>
   </nav>
+
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let profile = document.querySelector('.userprofile');
+      let letter = profile.textContent.trim().slice(0, 1).toUpperCase();
+      return letter;
+      console.log(letter);
+    });
+  </script> -->
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let profile = document.querySelector('.userprofile');
+      let letter = profile.textContent.trim().slice(0, 1).toUpperCase();
+      console.log(letter);
+    });
+  </script> -->
+
+  <script>
+
+
+    const circle = document.querySelector('.circle-2');
+    circle.addEventListener('click', () => {
+      location.href = '/user-profile';
+    });
+  </script>

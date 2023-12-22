@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://job-tracker-rho.vercel.app">
 
     <title>JOB TRACKER</title>
     <link rel="stylesheet" href="styles/styles.css">
@@ -19,13 +18,13 @@
                 <ul>
                     <% if (user) { %>
                         <div class="pp">
-                            <img src="<%= user.profilpicture %>" alt="">
-                            <!-- <img src="../assests/photo-avatar-profil.png" alt=""> -->
+                            <li class="profile-user"><a href="/user-profile">My Profile</a></li>
                         </div>
-                        <li><a href="/user-profile" class="userprofile">
-                                <%= user.firstname %>
-                            </a></li>
-
+                        <div class="circle-2">
+                            <li><a href="/user-profile" class="userprofile">
+                                    <%= user.firstname.slice(0, 1).toUpperCase() %>
+                                </a></li>
+                        </div>
 
                         <% } else { %>
                             <!-- <li><a href="/login">Log in</a></li>
@@ -90,37 +89,37 @@
                     <a href="/" class="arrow-link">&larr;</a>
                     <div class="card-profile">
                         <div class="glob-infos">
-                            <div class="photo">
-                                <img src="<%= user.profilpicture %>" class="pp-user">
-                                </img>
-                            </div>
                             <div class="infos">
-                                <h1>USER PROFILE</h1>
-                                <p>First name : <span>
-                                        <%= user.firstname %>
-                                    </span>
-                                </p>
-                                <p>Last name : <span>
-                                        <%= user.lastname %>
-                                    </span>
-                                </p>
-                                <p>Email address : <span>
-                                        <%= user.email %>
-                                    </span>
-                                </p>
-                                <p>Github : <span><a href="<%= user.github %>" target="_blank"
-                                            rel="noopener noreferrer">
-                                            <%= user.github %>
-                                        </a></span>
-                                </p>
-                                <!-- <p>Photo de profil : <%= user.profilpicture %>
+                                <div class="usr">
+                                    <h1>USER PROFILE</h1>
+                                </div>
+                                <div class="user-infos">
+                                    <p>First name : <span>
+                                            <%= user.firstname %>
+                                        </span>
+                                    </p>
+                                    <p>Last name : <span>
+                                            <%= user.lastname %>
+                                        </span>
+                                    </p>
+                                    <p>Email address : <span>
+                                            <%= user.email %>
+                                        </span>
+                                    </p>
+                                    <p>Github : <span><a href="<%= user.github %>" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <%= user.github %>
+                                            </a></span>
+                                    </p>
+                                    <!-- <p>Photo de profil : <%= user.profilpicture %>
                     </p> -->
-                                <p>CV : <span><a href="<%= user.cv %>" target="_blank" rel="noopener noreferrer">
-                                            <%= user.cv %>
-                                        </a></span>
-                                </p>
+                                    <p>CV : <span><a href="<%= user.cv %>" target="_blank" rel="noopener noreferrer">
+                                                <%= user.cv %>
+                                            </a></span>
+                                    </p>
+                                </div>
                                 <h2 class="h2"><a href="/update-profile" class="update-btn">Update Profile</a></h2>
-                                <h2><a href="/upload" class="add-btn">Add Picture</a></h2>
+                                <!-- <h2><a href="/upload" class="add-btn">Add Picture</a></h2> -->
                             </div>
 
                         </div>
@@ -140,6 +139,7 @@
 
 
                             <script>
+
                                 const form = document.querySelector('form');
                                 const emailError = document.querySelector('.email.error');
                                 const passwordError = document.querySelector('.password.error');

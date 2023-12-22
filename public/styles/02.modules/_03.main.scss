@@ -222,14 +222,7 @@
     // user profile
 
 .user-profile{
-    height: 65vh;
-    width: 100vw;
-    padding: 0 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
+
     .arrow-link{
         position:absolute;
         transform: translateY(-10px);
@@ -245,36 +238,49 @@
         justify-content: center;
         align-items: center;
         flex-direction: column  ;
-        width: 1000px;
+        width: 100vw;
+        height: 60vh;
+        padding: 0 40px;
+        // background-color: #215bc020;
+        border-radius: 20px;
+        // border: 2px solid $blue;
+        // box-shadow: 8px 5px 17px rgba(0, 0, 0, 0.22);
      .glob-infos{
-        width:800px;
-        height: 300px;
+        width: 860px;
+        height: 420px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
-        .photo{
-            width: 350px;
-            height: 300px;
-            margin-left: 30px;
-            .pp-user{
-                width: 86%;
-            }
-         }
+        justify-content: space-between;
+        gap: 50px;
+      
+
          .infos{
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 109%;
             display: flex;
-            justify-content: start;
-            align-items: start;
-            flex-direction: column;
-            h1{
-                font-size: 25px;
-                color: $white;
-                margin-bottom: 20px;
-                font-weight: 500;
-                padding: 5px 0px;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            background-color: #215bc020;
+            border-radius: 20px;
+            border: 1px solid $blue;
+            box-shadow: 8px 5px 17px rgba(0, 0, 0, 0.22);
+            padding: 20px;
+            position: relative;
+            .usr{
+                h1{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color: #4ca2ff;
+                    margin-bottom: 10px;
+                    letter-spacing: 0.5px;
+                    padding: 10px 30px;
+                    border: 0.0625rem solid #0a56a7;
+                    border-radius: 5px;
+                    text-align: center;
+                }
             }
+            
             p{
                 font-size: 16px;
                 font-weight: 100;
@@ -282,26 +288,29 @@
                 margin-bottom: 5px;
                 span{
                     font-weight: 300;
-                    color: $blue;
+                    color: $bluehover;
                     a{
                         font-size: 16px;
                         font-weight: 300;
-                    color: $blue;
+                    color: $bluehover;
                     }
                 }
             }
             h2{
-                .update-btn{
+                position: absolute;
+                bottom: 50px;
+                right: 42%;
+                .update-btn{     
                     font-size: 16px;
                     font-weight: 300;
                     color: $white;
-                    background-color: rgb(25, 194, 34);
-                    padding: 5px 15px;
-                    border-radius: 3px;
+                    background-color: #1c41b1;
+                    padding: 11px 18px;
+                    border-radius: 5px;
                 }
                 .update-btn:hover{
-                    background-color: rgb(123, 255, 130);
-                    color: gray;
+                    background-color: #2b59e2;
+                    color: white;
                     cursor: pointer;
                 }
                 .add-btn{
@@ -317,14 +326,11 @@
                     cursor: pointer;
                 }
             }
-            .h2{
-                margin-top: 25px;
-                margin-bottom: 30px;
-            }
+
          }
      }
      .btn-btm{
-        transform: translateY(80px);
+        transform: translateY(50px);
         width: 800px;
         display: flex;
         justify-content: center;
@@ -336,7 +342,7 @@
         }
         li{
             list-style: none;
-            padding: 7px 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             background-color: rgba(20, 44, 75, 0.712);
             display: flex;
@@ -350,7 +356,7 @@
         }
         button{
             list-style: none;
-            padding: 7px 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             background-color: #d63c3c;
             display: flex;

@@ -1,0 +1,39 @@
+// mixins
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+      @media only screen and (max-width: 767px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint == tablet {
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint == desktop {
+      @media only screen and (min-width: 1025px) {
+        @content;
+      }
+    }
+  }
+
+
+  // exemple : 
+//   .element {
+//     width: 100%;
+  
+//     @include responsive(mobile) {
+//       width: 50%;
+//     }
+  
+//     @include responsive(tablet) {
+//       width: 70%;
+//     }
+  
+//     @include responsive(desktop) {
+//       width: 80%;
+//     }
+//   }
