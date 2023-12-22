@@ -11,3 +11,17 @@ footer{
         font-weight: 100;
     }
 }
+
+
+.footer-list{
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        padding: 40px 40px;
+        font-size: 13px;
+        font-weight: 100;
+    }
+}

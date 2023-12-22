@@ -6,12 +6,12 @@ const jobSchema = new mongoose.Schema({
     jobTitle: {
         type: String,
         required: [false, 'Please enter your first name'],
-        lowercase: true
+        // lowercase: true
     },
     company: {
         type: String,
         required: [true, 'Please enter a name of the company'],
-        lowercase: true
+        // lowercase: true
     },
     website: {
         type: String,
@@ -20,7 +20,7 @@ const jobSchema = new mongoose.Schema({
     },
     nameContact: {
         type: String,
-        lowercase: true
+        // lowercase: true
     },
     emailContact: {
         type: String,

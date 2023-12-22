@@ -8,8 +8,10 @@
     <nav>
 
         <h1 class="logo"><a href="/">JOB<span>TRACKER</span></a></h1>
+        <h2 class="update-profile">Update Job</h2>
         <ul>
             <% if (user) { %>
+
                 <div class="pp">
                     <img src="<%= user.profilpicture %>" alt="">
                 </div>
@@ -30,94 +32,112 @@
     <% if (job) { %>
         <% if (updateJob) { %>
             <section>
-                <form action="/job/update/<%= job._id %>" method="PUT" enctype="multipart/form-data">
-                    <h2>Update</h2>
 
-                    <label for="jobTitle">Job title</label>
-                    <input type="text" name="jobTitle" value="<%= job.jobTitle %>" required>
-                    <div class="jobTitle error"></div>
-
-                    <label for="company">Company</label>
-                    <input type="text" name="company" value="<%= job.company %>" required>
-                    <div class="company error"></div>
-
-                    <label for="website">Website</label>
-                    <input type="text" name="website" value="<%= job.website %>" required>
-                    <div class="website error"></div>
-
+                <form action="/job/update/<%= job._id %>" method="PUT" enctype="multipart/form-data"
+                    class="form-create">
+                    <a href="/job/<%= job._id %>" class="arrow-link">&larr;</a>
                     <h3>Employer's contact</h3>
+                    <div class="info-job">
+                        <div class="info1">
+                            <label for="jobTitle">Job title</label>
+                            <input type="text" name="jobTitle" value="<%= job.jobTitle %>" required>
+                            <div class="jobTitle error"></div>
 
-                    <label for="name">Name</label>
-                    <input type="text" name="name" value="<%= job.nameContact %>">
+                            <label for="company">Company</label>
+                            <input type="text" name="company" value="<%= job.company %>" required>
+                            <div class="company error"></div>
 
-                    <label for="emailContact">Email of contact</label>
-                    <input type="text" name="emailContact" value="<%= job.emailContact%>">
-                    <div class="email error"></div>
+                            <label for="website">Website</label>
+                            <input type="text" name="website" value="<%= job.website %>" required>
+                            <div class="website error"></div>
+                        </div>
+                        <div class="info2">
 
-                    <label for="phone">Phone</label>
-                    <input type="text" name="phone" value="<%= job.phone %>">
 
-                    <label for="address">Address</label>
-                    <input type="text" name="address" value="<%= job.Address %>">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" value="<%= job.nameContact %>">
 
-                    <label for="origin">Origin</label>
-                    <select name="origin" id="origin" required>
-                        <option value="spontaneous">Spontaneous application</option>
-                        <option value="job offer">Job offer</option>
-                    </select>
-                    <div class="origin error"></div>
+                            <label for="emailContact">Email of contact</label>
+                            <input type="text" name="emailContact" value="<%= job.emailContact%>">
+                            <div class="email error"></div>
 
-                    <label for="statusJob">Status</label>
-                    <select name="statusJob" id="statusJob" required>
-                        <option value="interested">Interested</option>
-                        <option value="cv sent">CV sent</option>
-                        <option value="negative">Negative</option>
-                        <option value="interview">Interview</option>
-                    </select>
-                    <div class="status error"></div>
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" value="<%= job.phone %>">
 
-                    <label for="comments">Comments</label>
-                    <textarea name="comments" id="comments" cols="30" rows="10"><%= job.comments %></textarea>
+                            <label for="address">Address</label>
+                            <input type="text" name="address" value="<%= job.Address %>">
+                        </div>
+                        <div class="info3">
+                            <label for="origin">Origin</label>
+                            <select name="origin" id="origin" required>
+                                <option value="spontaneous">Spontaneous application</option>
+                                <option value="job offer">Job offer</option>
+                            </select>
+                            <div class="origin error"></div>
 
-                    <button class="update" type="submit" data-id="<%= job._id %>">Save</button>
+                            <label for="statusJob">Status</label>
+                            <select name="statusJob" id="statusJob" required>
+                                <option value="interested">Interested</option>
+                                <option value="cv sent">CV sent</option>
+                                <option value="negative">Negative</option>
+                                <option value="interview">Interview</option>
+                            </select>
+                            <div class="status error"></div>
+
+                            <label for="comments">Comments</label>
+                            <textarea name="comments" id="comments" cols="30" rows="10"><%= job.comments %></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-submit">
+                        <button class="update" type="submit" data-id="<%= job._id %>">Update</button>
+                    </div>
                 </form>
             </section>
             <% } else { %>
-                <section>
-                    <h2>
-                        <%= job.jobTitle %>
-                    </h2>
-                    <h3>
-                        <%= job.company %>
-                    </h3>
-                    <p>
-                        <%= job.website %>
-                    </p>
-                    <p>
-                        <%= job.nameContact %>
-                    </p>
-                    <p>
-                        <%= job.emailContact %>
-                    </p>
-                    <p>
-                        <%= job.phone %>
-                    </p>
-                    <p>
-                        <%= job.Address %>
-                    </p>
-                    <p>
-                        <%= job.origin %>
-                    </p>
-                    <p>
-                        <%= job.statusJob %>
-                    </p>
-                    <p>
-                        <%= job.comments %>
-                    </p>
+                <section class="section-detail">
+                    <a href="/list-jobs" class="arrow-link">&larr;</a>
+                    <div class="detail">
+                        <div class="card">
+                            <div class="infos1">
+                                <h2>
+                                    <%= job.jobTitle %>
+                                </h2>
+                                <h3>
+                                    <span>Company:</span>
+                                    <%= job.company %>
+                                </h3>
+                            </div>
+                            <div class="infos">
+                                <p><span>Website:</span>
+                                    <%= job.website %>
+                                </p>
+                                <p><span>Name of contact:</span>
+                                    <%= job.nameContact %>
+                                </p>
+                                <p><span>Email of contact</span>:
+                                    <%= job.emailContact %>
+                                </p>
+                                <p><span>Phone:</span>
+                                    <%= job.phone %>
+                                </p>
+                                <p><span>Address:</span>
+                                    <%= job.Address %>
+                                </p>
+                                <p><span>Origin:</span>
+                                    <%= job.origin %>
+                                </p>
+                                <p><Span>Status:</Span>
+                                    <%= job.statusJob %>
+                                </p>
+                                <p><span>Comments</span>
+                                    <%= job.comments %>
+                                </p>
+                            </div>
+                        </div>
 
 
-                    <a href="/list-jobs">Back to list</a>
-                    <a href="/job/update/<%= job._id %>">Edit</a>
+                        <a href="/job/update/<%= job._id %>" class="update">Update</a>
+                    </div>
                 </section>
                 <% } %>
                     <% } %>

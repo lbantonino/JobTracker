@@ -100,6 +100,18 @@ footer div {
   font-weight: 100;
 }
 
+.footer-list {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-list div {
+  padding: 40px 40px;
+  font-size: 13px;
+  font-weight: 100;
+}
+
 .headings {
   width: 100vw;
   padding: 0 40px;
@@ -687,4 +699,239 @@ footer div {
 .form-create .btn-submit button:hover {
   background-color: #4ca2ff;
   cursor: pointer;
+}
+
+.list-jobs {
+  width: 100vw;
+  padding: 0 40px;
+}
+.list-jobs .filtres {
+  display: flex;
+  justify-content: center;
+}
+.list-jobs .filtres .form-filtre {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+}
+.list-jobs .filtres .form-filtre label {
+  color: transparent;
+  font-size: 8px;
+}
+.list-jobs .filtres .form-filtre select {
+  width: 270px;
+  height: 30px;
+  background-color: transparent;
+  border: transparent;
+  border: 0.0625rem solid #0a56a7;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+  color: rgba(19, 133, 255, 0.7921568627);
+  font-size: 15px;
+  font-weight: 300;
+}
+.list-jobs .filtres .form-filtre select:focus {
+  border: 1px solid #4ca2ff;
+}
+.list-jobs .filtres .form-filtre button {
+  margin-top: 10px;
+  width: 270px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a56a7;
+  border-radius: 5px;
+  font-weight: 100;
+  font-size: 15px;
+  padding: 10 20px;
+  border: transparent;
+  color: #fff;
+}
+.list-jobs .filtres .form-filtre button:hover {
+  background-color: #4ca2ff;
+  cursor: pointer;
+}
+
+.jobs {
+  width: 100vw;
+  padding: 0 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.jobs .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  flex-direction: column;
+  width: 1140px;
+  position: relative;
+}
+.jobs .center .create-ajob {
+  position: absolute;
+  top: -150px;
+  right: 0;
+  font-size: 14px;
+  padding: 10 20px;
+  border-radius: 5px;
+  background-color: rgb(25, 194, 34);
+  color: #fff;
+}
+.jobs .center .create-ajob:hover {
+  background-color: rgba(123, 255, 130, 0.8);
+  cursor: pointer;
+}
+.jobs .center .job-ul {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 60px;
+  row-gap: 25px;
+  flex-wrap: wrap;
+}
+.jobs .center .job-ul .job {
+  width: 230px;
+  height: 180px;
+  padding: 30px;
+  background-color: rgba(33, 91, 192, 0.1254901961);
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid #0a56a7;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.jobs .center .job-ul .job h2 {
+  font-size: 23px;
+  font-weight: 500;
+}
+.jobs .center .job-ul .job h2 a {
+  color: rgb(53, 147, 255);
+}
+.jobs .center .job-ul .job h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.jobs .center .job-ul .job p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(77, 145, 255);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.jobs .center .job-ul .job .edit {
+  background-color: rgb(53, 147, 255);
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.jobs .center .job-ul .job .edit:hover {
+  background-color: rgb(122, 183, 252);
+  cursor: pointer;
+}
+.jobs .center .job-ul .job .delete {
+  background-color: #ff3c3c;
+  font-size: 15px;
+  font-weight: 300;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+}
+.jobs .center .job-ul .job .delete:hover {
+  background-color: #ff6767;
+  cursor: pointer;
+}
+
+.section-detail {
+  width: 100vw;
+  padding: 0 40px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.section-detail .arrow-link {
+  position: absolute;
+  transform: translateY(-10px);
+  left: 50px;
+  top: 50%;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 2px 6px 5px;
+  border: 2px solid white;
+}
+.section-detail .detail {
+  width: 70%;
+  height: 90%;
+  background-color: rgba(33, 91, 192, 0.0588235294);
+  border-radius: 20px;
+  border: 2px solid #0a56a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 8px 5px 17px rgba(0, 0, 0, 0.22);
+}
+.section-detail .detail .card {
+  width: 720px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.section-detail .detail .card .infos1 h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4ca2ff;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  padding: 10px 30px;
+  border: 0.0625rem solid #0a56a7;
+  border-radius: 5px;
+  text-align: center;
+}
+.section-detail .detail .card .infos1 h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.section-detail .detail .card .infos1 h3 span {
+  font-weight: 100;
+}
+.section-detail .detail .card .infos {
+  width: 300px;
+}
+.section-detail .detail .card .infos p {
+  font-size: 0.85rem;
+  font-weight: 100;
+  color: #4ca2ff;
+  letter-spacing: 0.5px;
+  padding: 0 0px 10px;
+  font-weight: 300;
+}
+.section-detail .detail .card .infos p span {
+  font-weight: 100;
+  color: white;
+}
+.section-detail .detail .update {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1c41b1;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
 }
