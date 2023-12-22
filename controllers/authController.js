@@ -66,6 +66,7 @@ module.exports.signup_post = async (req, res) => {
       cv
     } = req.body;
 
+    userInfos.profilpicture = 'photo-avatar-profil.png'
     console.log(req.body);
 
     const user = await User.create(userInfos);
