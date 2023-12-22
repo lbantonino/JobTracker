@@ -6,17 +6,18 @@
         <img src="<%= user.profilpicture %>" alt="">
       </div> -->
       <div class="headings">
-        <h2>JOB TRACKER</h2>
-        <h3>Bonjour <%= user.firstname %>
-        </h3>
-        <a href="/list-jobs" class="btn">View Jobs</a>
-        <a href="/create-job" class="btn">Create a job</a>
+        <div class="btn-btn">
+          <a href="/list-jobs" class="btnlog">List Jobs</a>
+          <a href="/create-job" class="btnlog">Create a job</a>
+        </div>
       </div>
     </header>
     <% } else { %>
       <div class="headings">
-        <a href="/login" class="btnlog">Login</a>
-        <a href="/signup" class="btnlog sig">Signup</a>
+        <div class="btn-btn">
+          <a href="/login" class="btnlog">Log in</a>
+          <a href="/signup" class="btnlog">Sign up</a>
+        </div>
       </div>
       <% } %>
 

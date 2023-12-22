@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #03050c;
+    position: relative;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .error{
+    margin-top: 3px;
+    color: #66b0ff;
+    font-size: 13px;
+    font-weight: 100;
+  }

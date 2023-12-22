@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+@import "01.partials/01.reset";
+@import "01.partials/02.variables";
+@import "01.partials/03.mixins";
+@import "02.modules/01.header";
+@import "02.modules/02.footer";
+@import "02.modules/03.main";
+

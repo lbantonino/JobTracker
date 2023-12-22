@@ -1,14 +1,14 @@
 <%- include('partials/header'); -%>
-
-<form method="POST" action="/upload" enctype="multipart/form-data">
-    <div>
-        <label>Upload profile picture</label>
-        <input type="file" name="profile-file" required/>
+    <div class="download-image">
+        <a href="/user-profile" class="arrow-link">&larr;</a>
+        <form method="POST" action="/upload" enctype="multipart/form-data" class="form-login2">
+            <div class="upload-picture">
+                <label>Upload profile picture</label>
+                <input type="file" name="profile-file" required />
+            </div>
+            <div class="btn-submit">
+                <input type="submit" value="Upload" />
+            </div>
+        </form>
     </div>
-    <div>
-        <input type="submit" value="Upload" />
-    </div>
-</form>
-
-<%- include('partials/footer'); -%>
-
+    <%- include('partials/footer'); -%>

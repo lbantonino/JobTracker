@@ -1,23 +1,25 @@
 <%- include('partials/header'); -%>
   <div class="form-card">
-    <div class="log">
-      <h2> <a href="/Login" class="login1">Login</a></h2>
-      <h2><a href="/signup" class="signup1">Signup</a></h2>
-    </div>
-    <form action="/signup" class="form-login">
+    <div class="form-square">
+      <div class="log">
+        <!-- <h2 class="login1">Log in</h2> -->
+        <!-- <h2><a href="/signup" class="signup1">Sign up</a></h2> -->
+      </div>
+      <form action="/signup" class="form-login">
 
-      <label for="email" class="email">Email</label>
-      <input type="text" name="email" class="email-input" placeholder=" Enter your email" />
-      <div class="email error"></div>
-      <label for="password" class="password">Password</label>
-      <input type="password" name="password" class="password-input" placeholder="Password" />
-      <div class="password error"></div>
-      <button class="btn-login-push">Login</button>
-      <p class="notregistered">
-        Not registered yet?
-        <a href="/signup">Create an account</a>
-      </p>
-    </form>
+        <label for="email" class="email">Email</label>
+        <input type="text" name="email" class="email-input" placeholder=" Enter your email" />
+        <div class="email error"></div>
+        <label for="password" class="password">Password</label>
+        <input type="password" name="password" class="password-input" placeholder="Password" />
+        <div class="password error"></div>
+        <button class="btn-login-push">Log in</button>
+        <p class="notregistered">
+          Not registered yet?
+          <a href="/signup">Create an account</a>
+        </p>
+      </form>
+    </div>
   </div>
   <%- include('partials/footer'); -%>
 
