@@ -13,7 +13,8 @@
             <% if (user) { %>
 
                 <div class="pp">
-                    <img src="<%= user.profilpicture %>" alt="">
+                    <!-- <img src="<%= user.profilpicture %>" alt=""> -->
+                    <img src="../assests/photo-avatar-profil.png" alt="">
                 </div>
                 <li><a href="/user-profile" class="userprofile">
                         <%= user.firstname %>
@@ -89,7 +90,7 @@
                         </div>
                     </div>
                     <div class="btn-submit">
-                        <button class="update" type="submit" data-id="<%= job._id %>">Update</button>
+                        <button class="update" type="submit" data-id="<%= job._id %>">Save</button>
                     </div>
                 </form>
             </section>
