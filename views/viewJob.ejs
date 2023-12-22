@@ -1,4 +1,30 @@
-<%- include('partials/header'); -%>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOB TRACKER</title>
+<link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <nav>
+
+        <h1 class="logo"><a href="/">JOB<span>TRACKER</span></a></h1>
+        <ul>
+            <% if (user) { %>
+                <div class="pp">
+                    <img src="<%= user.profilpicture %>" alt="">
+                </div>
+                <li><a href="/user-profile" class="userprofile">
+                        <%= user.firstname %>
+                    </a></li>
+
+
+                <% } else { %>
+                    <!-- <li><a href="/login">Log in</a></li>
+        <li><a href="/signup" class="btn">Sign up</a></li> -->
+                    <% } %>
+        </ul>
+    </nav>
+
 
 
     <% if (job) { %>

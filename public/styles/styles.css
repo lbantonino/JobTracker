@@ -684,3 +684,7 @@ footer div {
   border: transparent;
   color: #fff;
 }
+.form-create .btn-submit button:hover {
+  background-color: #4ca2ff;
+  cursor: pointer;
+}
