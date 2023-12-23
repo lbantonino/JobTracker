@@ -54,6 +54,15 @@
   </html>
 
   <script>
+    window.addEventListener("orientationchange", function () {
+      // Bloquer le retournement de l'écran
+      if (window.orientation !== 0) {
+        alert("L'inversion d'écran n'est pas autorisée durant l'inscription. Veuillez remettre votre écran en position verticale.");
+      }
+    });
+
+
+
     const form = document.querySelector('form');
     const emailError = document.querySelector('.email.error');
     const passwordError = document.querySelector('.password.error');
