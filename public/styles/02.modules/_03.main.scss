@@ -117,12 +117,13 @@
                 font-size: 17px;
                 font-weight: 300;
              }
-             input::placeholder{
-                @include responsive(mobile) {
-                color: $blue;
-                font-size: 17px;
-                font-weight: 300;
-             }
+             @include responsive(mobile) {
+                input::placeholder {
+                  font-size: 17px;
+                  font-weight: 300;
+                  -webkit-text-fill-color: $blue;
+                }
+                       
                 }
              .password-input{
                 margin-bottom: 40px;
