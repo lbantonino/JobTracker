@@ -262,7 +262,8 @@ footer div {
   .form-card .form-square .form-login input::placeholder {
     font-size: 17px;
     font-weight: 300;
-    -webkit-text-fill-color: #4d209b;
+    -webkit-text-fill-color: #4d209b !important;
+    color: #4d209b !important;
   }
 }
 .form-card .form-square .form-login .password-input {

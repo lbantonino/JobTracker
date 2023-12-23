@@ -121,7 +121,8 @@
                 input::placeholder {
                   font-size: 17px;
                   font-weight: 300;
-                  -webkit-text-fill-color: $blue;
+                  -webkit-text-fill-color: $blue !important;
+                  color: $blue !important;
                 }
                        
                 }
