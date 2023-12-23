@@ -5,11 +5,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include responsive(mobile) {
+        height: 70vh;
+      }
     .btn-btn{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 310px;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 35px;
         .btnlog{
             
             background-color: $blue;

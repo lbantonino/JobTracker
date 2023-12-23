@@ -1,6 +1,62 @@
-<%- include('partials/header'); -%>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JOB TRACKER</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <!-- <nav>
+    <h1 class="logo"><a href="/">JOB<span>TRACKER</span></a></h1>
+    <ul>
+      <% if (user) { %>
+        <div class="pp">
+          <li class="profile-user"><a href="/user-profile">
+              My Profile </a>
+          </li>
+        </div>
+        <div class="circle-2">
+          <li class="circle">
+            <a href="/user-profile" class="userprofile">
+              <%= user.firstname.slice(0, 1).toUpperCase() %>
+            </a>
+          </li>
+        </div>
+
+        <% } else { %> -->
+  <!-- <li><a href="/login">Log in</a></li>
+          <li><a href="/signup" class="btn">Sign up</a></li> -->
+  <!-- <% } %>
+    </ul>
+  </nav> -->
 
   <% if (user) { %>
+    <nav>
+      <h1 class="logo"><a href="/">JOB<span>TRACKER</span></a></h1>
+      <ul>
+        <% if (user) { %>
+          <div class="pp">
+            <li class="profile-user"><a href="/user-profile">
+                My Profile </a>
+            </li>
+          </div>
+          <div class="circle-2">
+            <li class="circle">
+              <a href="/user-profile" class="userprofile">
+                <%= user.firstname.slice(0, 1).toUpperCase() %>
+              </a>
+            </li>
+          </div>
+
+          <% } else { %>
+            <!-- <li><a href="/login">Log in</a></li>
+            <li><a href="/signup" class="btn">Sign up</a></li> -->
+            <% } %>
+      </ul>
+    </nav>
     <header>
       <!-- <div class="smoothie">
         <img src="<%= user.profilpicture %>" alt="">
@@ -13,6 +69,9 @@
       </div>
     </header>
     <% } else { %>
+      <nav>
+        <h1 class="logo1"><a href="/">JOB<span>TRACKER</span></a></h1>
+      </nav>
       <div class="headings">
         <div class="btn-btn">
           <a href="/login" class="btnlog">Log in</a>
