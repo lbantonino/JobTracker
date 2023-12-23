@@ -6,11 +6,14 @@ nav{
     padding: 0px 40px;
     @include responsive(mobile) {
         height: 10vh;
-        align-items: end;
+        position: absolute;
+        top: 10px;
+    
       }
       @include responsive(tablet) {
         height: 10vh;
-        align-items: end;
+        position: absolute;
+        top: 10px;
       }
     .logo{
         @include responsive(mobile) {
