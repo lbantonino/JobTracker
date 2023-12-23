@@ -1,8 +1,9 @@
 footer{
+    display: none;
     width: 100vw;
     position: absolute;
     bottom: 10px;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     div{
@@ -14,9 +15,10 @@ footer{
 
 
 .footer-list{
+    display: none;
     width: 100vw;
 
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     div{

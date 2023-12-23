@@ -123,10 +123,10 @@ nav ul .circle-2:hover {
 }
 
 footer {
+  display: none;
   width: 100vw;
   position: absolute;
   bottom: 10px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -137,8 +137,8 @@ footer div {
 }
 
 .footer-list {
+  display: none;
   width: 100vw;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
