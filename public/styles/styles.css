@@ -38,10 +38,39 @@ a {
 
 /* font-family: 'Roboto', sans-serif; */
 nav {
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 40px;
+  padding: 0px 40px;
+}
+@media only screen and (max-width: 767px) {
+  nav {
+    height: 10vh;
+    align-items: end;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    height: 10vh;
+    align-items: end;
+  }
+}
+@media only screen and (max-width: 767px) {
+  nav .logo {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav .logo {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 nav .logo a {
   font-family: "Roboto", sans-serif;
@@ -55,6 +84,14 @@ nav .logo a span {
   font-weight: 300;
 }
 @media only screen and (max-width: 767px) {
+  nav .logo1 {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   nav .logo1 {
     width: 100vw;
     display: flex;
@@ -123,15 +160,15 @@ nav ul .circle-2:hover {
 }
 
 footer {
-  display: none;
   width: 100vw;
+  height: 10vh;
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 footer div {
-  padding: 40px 40px;
   font-size: 13px;
   font-weight: 100;
 }
@@ -148,13 +185,28 @@ footer div {
   font-weight: 100;
 }
 
-.headings {
+.footer-signup {
   width: 100vw;
-  padding: 0 40px;
-  height: 60vh;
+  height: 10vh;
+  bottom: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
+}
+
+.headings {
+  width: 100vw;
+  padding: 0 40px;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .headings {
+    height: 80vh;
+  }
 }
 .headings .btn-btn {
   width: 100vw;
@@ -190,6 +242,19 @@ footer div {
   align-items: center;
   flex-direction: column;
   position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .form-card {
+    height: auto;
+    margin-top: 40px;
+    width: 100vw;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
 }
 .form-card .arrow-link {
   position: absolute;

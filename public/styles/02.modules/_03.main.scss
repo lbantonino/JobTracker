@@ -1,12 +1,12 @@
 .headings{
     width: 100vw;
     padding: 0 40px;
-    height: 60vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     @include responsive(mobile) {
-        // height: 70vh;
+        height: 80vh;
       }
     .btn-btn{
           width: 100vw;
@@ -47,6 +47,18 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    @include responsive(mobile) {
+        height: auto;
+        margin-top: 40px;
+        width: 100vw;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+      }
     .arrow-link{
         position:absolute;
         left: 50px;
