@@ -125,7 +125,7 @@ nav ul .circle-2:hover {
 footer {
   width: 100vw;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
