@@ -57,7 +57,11 @@
     window.addEventListener("orientationchange", function () {
       // Bloquer le retournement de l'écran
       if (window.orientation !== 0) {
+        document.documentElement.style.width = window.innerHeight + "px";
         alert("L'inversion d'écran n'est pas autorisée durant l'inscription. Veuillez remettre votre écran en position verticale.");
+      }
+      else {
+        document.documentElement.style.width = "auto";
       }
     });
 
