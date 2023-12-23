@@ -405,6 +405,14 @@ footer div {
   font-size: 14px;
   font-weight: 300;
 }
+@media only screen and (max-width: 767px) {
+  .form-card .form-square .form-login1 input::placeholder {
+    font-size: 17px;
+    font-weight: 300;
+    -webkit-text-fill-color: #4d209b !important;
+    color: #4d209b !important;
+  }
+}
 .form-card .form-square .form-login1 .password-input1 {
   margin-bottom: 20px;
 }
