@@ -156,11 +156,6 @@ footer div {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 767px) {
-  .headings {
-    height: 70vh;
-  }
-}
 .headings .btn-btn {
   width: 100vw;
   display: flex;
@@ -262,6 +257,13 @@ footer div {
   color: #4d209b;
   font-size: 17px;
   font-weight: 300;
+}
+@media only screen and (max-width: 767px) {
+  .form-card .form-square .form-login input::placeholder {
+    color: #4d209b;
+    font-size: 17px;
+    font-weight: 300;
+  }
 }
 .form-card .form-square .form-login .password-input {
   margin-bottom: 40px;

@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     @include responsive(mobile) {
-        height: 70vh;
+        // height: 70vh;
       }
     .btn-btn{
           width: 100vw;
@@ -117,6 +117,13 @@
                 font-size: 17px;
                 font-weight: 300;
              }
+             input::placeholder{
+                @include responsive(mobile) {
+                color: $blue;
+                font-size: 17px;
+                font-weight: 300;
+             }
+                }
              .password-input{
                 margin-bottom: 40px;
              }
