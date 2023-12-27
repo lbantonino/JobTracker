@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="connected">
         <h1 class="logo"><a href="/">JOB<span>TRACKER</span></a></h1>
         <% if (update) { %>
             <h2 class="update-profile">Update Profile
@@ -21,9 +21,11 @@
                             <li class="profile-user"><a href="/user-profile">My Profile</a></li>
                         </div>
                         <div class="circle-2">
-                            <li><a href="/user-profile" class="userprofile">
+                            <li class="circle">
+                                <a href="/user-profile" class="userprofile">
                                     <%= user.firstname.slice(0, 1).toUpperCase() %>
-                                </a></li>
+                                </a>
+                            </li>
                         </div>
 
                         <% } else { %>
@@ -37,9 +39,10 @@
     <% if (user) { %>
         <% if (update) { %>
             <section>
-
+                <a href="/user-profile" class="back">Back</a>
+                <a href="/user-profile" class="arrow-link">&larr;</a>
                 <div class="form-card">
-                    <a href="/user-profile" class="arrow-link">&larr;</a>
+
                     <div class="form-square">
                         <form action="/update-profile" method="PUT" enctype="multipart/form-data" class="form-login1">
 
@@ -86,168 +89,163 @@
             </section>
             <% } else { %>
                 <section class="user-profile">
-                    <a href="/" class="arrow-link">&larr;</a>
-                    <div class="card-profile">
-                        <div class="glob-infos">
-                            <div class="infos">
-                                <div class="usr">
-                                    <h1>USER PROFILE</h1>
-                                </div>
-                                <div class="user-infos">
-                                    <p>First name : <span>
-                                            <%= user.firstname %>
-                                        </span>
-                                    </p>
-                                    <p>Last name : <span>
-                                            <%= user.lastname %>
-                                        </span>
-                                    </p>
-                                    <p>Email address : <span>
-                                            <%= user.email %>
-                                        </span>
-                                    </p>
-                                    <p>Github : <span><a href="<%= user.github %>" target="_blank"
-                                                rel="noopener noreferrer">
-                                                <%= user.github %>
-                                            </a></span>
-                                    </p>
-                                    <!-- <p>Photo de profil : <%= user.profilpicture %>
-                    </p> -->
-                                    <p>CV : <span><a href="<%= user.cv %>" target="_blank" rel="noopener noreferrer">
-                                                <%= user.cv %>
-                                            </a></span>
-                                    </p>
-                                </div>
-                                <h2 class="h2"><a href="/update-profile" class="update-btn">Update Profile</a></h2>
-                                <!-- <h2><a href="/upload" class="add-btn">Add Picture</a></h2> -->
-                            </div>
+                    <a href="/list-jobs" class="back">Back</a>
+                    <a href="/list-jobs" class="arrow-link">&larr;</a>
+                    <div class="general">
+                        <h1>USER PROFILE</h1>
+                        <div class="detail-user">
+                            <p>First name : <span>
+                                    <%= user.firstname %>
+                                </span>
+                            </p>
+                            <p>Last name : <span>
+                                    <%= user.lastname %>
+                                </span>
+                            </p>
+                            <p>Email: <span>
+                                    <%= user.email %>
+                                </span>
+                            </p>
+                            <p>Github : <span><a href="<%= user.github %>" target="_blank" rel="noopener noreferrer">
+                                        <%= user.github %>
+                                    </a></span>
+                            </p>
 
+                            <p>CV : <span><a href="<%= user.cv %>" target="_blank" rel="noopener noreferrer">
+                                        <%= user.cv %>
+                                    </a></span>
+                            </p>
                         </div>
-
-                        <div class="btn-btm">
-                            <li class="li-logout btn-push""><a href=" /logout" class="logout">Log out</a></li>
-                            <button class="delete btn-push">Delete profile</button>
-                        </div>
-
+                        <h2 class="h2"><a href="/update-profile" class="update-btn">Edit Profile</a></h2>
                     </div>
+                    <div class="btn-btn">
+                        <li class="li-logout btn-push""><a href=" /logout" class="logout">Log out</a></li>
+                        <button class="delete btn-push">Delete profile</button>
+                    </div>
+
+
                 </section>
                 <% } %>
                     <% } %>
 
-                        <%- include('partials/footer'); -%>
+                        <footer class="footer-userprofile">
+                            <div>
+                                © Copyright 2023 - Antonino Lo Bianco
+                            </div>
+                        </footer>
 
 
 
-                            <script>
+                        <script>
 
-                                const form = document.querySelector('form');
-                                const emailError = document.querySelector('.email.error');
-                                const passwordError = document.querySelector('.password.error');
-                                const confirmPasswordError = document.querySelector('.confirmpassword.error');
-                                const firstnameError = document.querySelector('.firstname.error');
-                                const lastnameError = document.querySelector('.lastname.error');
-                                const updateBtn = document.querySelector('.update');
-                                document.addEventListener('submit', async (e) => {
-                                    e.preventDefault();
+                            const form = document.querySelector('form');
+                            const emailError = document.querySelector('.email.error');
+                            const passwordError = document.querySelector('.password.error');
+                            const confirmPasswordError = document.querySelector('.confirmpassword.error');
+                            const firstnameError = document.querySelector('.firstname.error');
+                            const lastnameError = document.querySelector('.lastname.error');
+                            const updateBtn = document.querySelector('.update');
+                            document.addEventListener('submit', async (e) => {
+                                e.preventDefault();
 
-                                    // reset errors
-                                    emailError.textContent = '';
-                                    passwordError.textContent = '';
-                                    confirmPasswordError.textContent = '';
-                                    firstnameError.textContent = '';
-                                    lastnameError.textContent = '';
+                                // reset errors
+                                emailError.textContent = '';
+                                passwordError.textContent = '';
+                                confirmPasswordError.textContent = '';
+                                firstnameError.textContent = '';
+                                lastnameError.textContent = '';
 
-                                    // get values
-                                    const email = form.email.value;
-                                    const password = form.password.value;
-                                    const confirmpassword = form.confirmpassword.value;
-                                    const firstname = form.firstname.value
-                                    const lastname = form.lastname.value
-                                    const github = form.github.value
-                                    const profilpicture = "";
-                                    const cv = form.cv.value
+                                // get values
+                                const email = form.email.value;
+                                const password = form.password.value;
+                                const confirmpassword = form.confirmpassword.value;
+                                const firstname = form.firstname.value
+                                const lastname = form.lastname.value
+                                const github = form.github.value
+                                const profilpicture = "";
+                                const cv = form.cv.value
 
 
-                                    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-                                    if (password !== confirmpassword || !emailRegex.test(email) || firstname === '' || lastname === '') {
-                                        if (password !== confirmpassword) {
-                                            confirmPasswordError.textContent = 'Passwords do not match';
+                                const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+                                if (password !== confirmpassword || !emailRegex.test(email) || firstname === '' || lastname === '') {
+                                    if (password !== confirmpassword) {
+                                        confirmPasswordError.textContent = 'Passwords do not match';
+                                    }
+                                    if (!emailRegex.test(email)) {
+                                        emailError.textContent = 'Email is not valid';
+                                    }
+                                    if (firstname === '') {
+                                        firstnameError.textContent = 'First name is required';
+                                    }
+                                    if (lastname === '') {
+                                        lastnameError.textContent = 'Last name is required';
+                                    }
+                                } else {
+                                    let infoUsers = {
+                                        firstname,
+                                        lastname,
+                                        email,
+                                        password,
+                                        linkedin: "",
+                                        github,
+                                        profilpicture,
+                                        cv
+                                    }
+                                    try {
+                                        const res = await fetch('/update-profile', {
+                                            method: 'PUT',
+                                            body: JSON.stringify(infoUsers),
+                                            headers: { 'Content-Type': 'application/json' }
+                                        });
+                                        const data = await res.json();
+                                        console.log(data);
+                                        if (data.errors) {
+                                            emailError.textContent = data.errors.email;
+                                            passwordError.textContent = data.errors.password;
                                         }
-                                        if (!emailRegex.test(email)) {
-                                            emailError.textContent = 'Email is not valid';
+                                        if (data.user) {
+                                            location.assign('/user-profile');
                                         }
-                                        if (firstname === '') {
-                                            firstnameError.textContent = 'First name is required';
-                                        }
-                                        if (lastname === '') {
-                                            lastnameError.textContent = 'Last name is required';
-                                        }
-                                    } else {
-                                        let infoUsers = {
-                                            firstname,
-                                            lastname,
-                                            email,
-                                            password,
-                                            linkedin: "",
-                                            github,
-                                            profilpicture,
-                                            cv
-                                        }
-                                        try {
-                                            const res = await fetch('/update-profile', {
-                                                method: 'PUT',
-                                                body: JSON.stringify(infoUsers),
-                                                headers: { 'Content-Type': 'application/json' }
-                                            });
-                                            const data = await res.json();
-                                            console.log(data);
-                                            if (data.errors) {
-                                                emailError.textContent = data.errors.email;
-                                                passwordError.textContent = data.errors.password;
+
+                                    }
+                                    catch (err) {
+                                        console.log(err);
+                                    }
+                                }
+
+                            });
+
+                            const deleteButton = document.querySelector('.delete');
+                            deleteButton.addEventListener('click', async (e) => {
+                                e.preventDefault();
+                                const confirmation = confirm("Are you sure you want to delete your profile?");
+                                if (confirmation) {
+                                    try {
+                                        const res = await fetch('/delete-profile', {
+                                            method: 'DELETE',
+                                            body: JSON.stringify({ _id: 0 }),
+                                            headers: {
+                                                'Content-Type': 'application/json'
                                             }
-                                            if (data.user) {
-                                                location.assign('/user-profile');
-                                            }
-
+                                        });
+                                        const data = await res.json();
+                                        console.log(data);
+                                        if (data.user) {
+                                            location.assign('/signup');
                                         }
-                                        catch (err) {
-                                            console.log(err);
+                                        else {
+                                            location.assign('/signup');
+
                                         }
                                     }
-
-                                });
-
-                                const deleteButton = document.querySelector('.delete');
-                                deleteButton.addEventListener('click', async (e) => {
-                                    e.preventDefault();
-                                    const confirmation = confirm("Are you sure you want to delete your profile?");
-                                    if (confirmation) {
-                                        try {
-                                            const res = await fetch('/delete-profile', {
-                                                method: 'DELETE',
-                                                body: JSON.stringify({ _id: 0 }),
-                                                headers: {
-                                                    'Content-Type': 'application/json'
-                                                }
-                                            });
-                                            const data = await res.json();
-                                            console.log(data);
-                                            if (data.user) {
-                                                location.assign('/signup');
-                                            }
-                                            else {
-                                                location.assign('/signup');
-
-                                            }
-                                        }
-                                        catch (err) {
-                                            console.log(err);
-                                        }
+                                    catch (err) {
+                                        console.log(err);
                                     }
-                                });
+                                }
+                            });
 
 
 
 
 
-                            </script>
+                        </script>

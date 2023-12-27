@@ -7,29 +7,35 @@ body {
   background-color: $bg-color;
   position: relative;
   font-size: 16px;
+  overflow-x: hidden;
   
   @include phone-portrait {
     font-size: 16px;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   
   @include phone-landscape {
     font-size: 16px;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   
   @include tablet-portrait {
     font-size: 16px;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   
   @include tablet-landscape {
     font-size: 16px;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   
   @include desktop {
     font-size: 16px;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 }
