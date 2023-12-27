@@ -1,0 +1,98 @@
+.form-login{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    label{
+        color: transparent;
+    }
+    input{
+        outline: none;
+        border: none;
+        width: 275px;
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid $blue;
+        color: $white;
+    }
+    input::placeholder{
+        color: $blue;
+        font-weight: 300;
+        -webkit-text-fill-color: $blue;
+    }
+    input:focus{
+        border: 1px solid $bluehover;
+    }
+    input:focus::placeholder{
+        color: $bluehover;
+        -webkit-text-fill-color: $bluehover;
+    }
+    button{
+        width: 275px;
+        height: 50px;
+        background-color: $blue;
+        border-radius: 5px;
+        border: none;
+        color: $white;
+        font-weight: 300;
+    }
+    button:hover{
+        background-color: $bluehover;
+    }
+    .notregistered{
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 100;
+        a{
+            color: $blue;
+            font-weight: 300;
+            text-decoration: underline;
+            &:hover{
+                color: $bluehover;
+            }
+        }
+    }
+    @include phone-portrait{
+        height: 77.5vh;
+    }
+    @include phone-landscape{
+        height: 70vh;
+        gap: 5px;
+        input{
+            height: 40px;
+            border-radius: 3px;
+        }
+        button{
+            height: 40px;
+            border-radius: 3px;
+        }
+    }
+    @include tablet-portrait{
+        height: 80vh;
+    }
+    @include tablet-landscape{
+        height: 70vh;
+    }
+    @include desktop{
+        height: 80vh;
+    }
+}
+
+
+.footer-login{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+    height: auto;
+    bottom: 0;
+    height: 10vh;
+    div{
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+}

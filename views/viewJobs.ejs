@@ -1,103 +1,80 @@
 <%- include('partials/header'); -%>
-  <section class="list-jobs">
-    <div class="filtres">
-      <form action="/list-jobs" method="GET" class="form-filtre">
 
-        <!-- Filtre par origine -->
-        <label for="filterOrigin">Filter by Origin:</label>
-        <select id="filterOrigin" name="filterOrigin">
-          <option value="">All Origins</option>
-          <% origins.forEach(origin=> { %>
-            <option value="<%= origin %>">
-              <%= origin %>
-            </option>
-            <% }); %>
-              <option value="spontaneous">Spontaneous Candidature</option>
-              <option value="job offer">Job offer</option>
-        </select>
+  <form action="/list-jobs" method="GET" class="form-filtre">
+    <a href="/create-job" class="create-ajob">Create a Job</a>
+    <!-- Filtre par origine -->
+    <!-- <label for="filterOrigin">Filter by Origin:</label> -->
+    <select id="filterOrigin" name="filterOrigin">
+      <option value="">All Origins</option>
+      <% origins.forEach(origin=> { %>
+        <option value="<%= origin %>">
+          <%= origin %>
+        </option>
+        <% }); %>
+          <option value="spontaneous">Spontaneous Candidature</option>
+          <option value="job offer">Job offer</option>
+    </select>
 
-        <!-- Filtre par statut -->
-        <label for="filterStatus">Filter by Status:</label>
-        <select id="filterStatus" name="filterStatus">
-          <option value="">All Status</option>
-          <% statusJobs.forEach(status=> { %>
-            <option value="<%= status %>">
-              <%= status %>
-            </option>
-            <% }); %>
-              <option value="interested">Interested</option>
-              <option value="cv sent">CV Sent</option>
-              <option value="negative">Negative</option>
-              <option value="interview">Interview</option>
-        </select>
+    <!-- Filtre par statut -->
+    <!-- <label for="filterStatus">Filter by Status:</label> -->
+    <select id="filterStatus" name="filterStatus">
+      <option value="">All Status</option>
+      <% statusJobs.forEach(status=> { %>
+        <option value="<%= status %>">
+          <%= status %>
+        </option>
+        <% }); %>
+          <option value="interested">Interested</option>
+          <option value="cv sent">CV Sent</option>
+          <option value="negative">Negative</option>
+          <option value="interview">Interview</option>
+    </select>
 
-        <button type="submit">Apply Filters</button>
+    <button type="submit">Apply Filters</button>
 
-      </form>
-    </div>
-  </section>
-  <section class="jobs">
-    <div class="center">
-      <ul class="job-ul">
-        <% if (jobs) { %>
-          <% jobs.forEach(job=> { %>
-            <% if ((!filterOrigin || job.origin.includes(filterOrigin)) && (!filterStatus ||
-              job.statusJob.includes(filterStatus))) { %>
-              <li class="job">
+  </form>
+
+  <div class="desktop">
+    <ul class="job-ul">
+      <% if (jobs) { %>
+        <% jobs.forEach(job=> { %>
+          <% if ((!filterOrigin || job.origin.includes(filterOrigin)) && (!filterStatus ||
+            job.statusJob.includes(filterStatus))) { %>
+
+            <li class="job">
+              <a href="/job/<%= job._id %>">
                 <h2>
-                  <a href="/job/<%= job._id %>">
-                    <%= job.jobTitle %>
-                  </a>
+                  <%= job.jobTitle %>
                 </h2>
 
                 <h3>
                   <%= job.company %>
                 </h3>
-                <!-- <p>
-          <%= job.website %>
-        </p> -->
-                <!-- <p>
-              <%= job.nameContact %>
-            </p> -->
-                <!-- <p>
-              <%= job.emailContact%>
-            </p> -->
-                <!-- <p>
-          <%= job.phone %>
-        </p> -->
-                <!-- <p>
-              <%= job.Address %>
-            </p> -->
-                <!-- < <p>
-          <%= job.origin %>
-        </p> -->
+                <p>
+                  <%= job.origin %>
+                </p>
                 <p class="statusJob">
                   <%= job.statusJob %>
                 </p>
-                <!-- <p>
-              <%= job.comments %>
-            </p> -->
                 <a href="/job/update/<%= job._id %>" class="edit">Edit</a>
                 <button class="delete" type="submit" data-jobid="<%= job._id %>">Delete</button>
-
-
-
-              </li>
-              <% } %>
-                <% }); %>
-                  <% } else { %>
-                    <p>No jobs found.</p>
-                    <% } %>
-      </ul>
-      <a href="/create-job" class="create-ajob">Create a Job</a>
-    </div>
+            </li>
+            </a>
+            <% } %>
+              <% }); %>
+                <% } else { %>
+                  <p>No jobs found.</p>
+                  <% } %>
+    </ul>
+  </div>
+  </div>
   </section>
 
-  <!-- <div class="footer-list">
+  <div class="footer-list-jobs">
     <div>
-      © Copyright 2023 - Team MAH
+      © Copyright 2023 - Antonino Lo Bianco
     </div>
-  </div> -->
+  </div>
 
   </body>
 
@@ -108,7 +85,6 @@
 
   <script>
 
-    const statusJob = document.querySelector('.statusJob');
 
     async function fetchJobs() {
 

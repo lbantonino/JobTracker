@@ -4,7 +4,15 @@
 @import "01.partials/01.reset";
 @import "01.partials/02.variables";
 @import "01.partials/03.mixins";
+@import "02.modules/00.body";
 @import "02.modules/01.header";
 @import "02.modules/02.footer";
-@import "02.modules/03.main";
+@import "02.modules/03.home";
+@import "02.modules/04.login";
+@import "02.modules/05.signup";
+@import "02.modules/06.list-jobs";
+@import "02.modules/07.create-job";
+@import "02.modules/08.profile-user";
+@import "02.modules/09.update-profile";
+@import "02.modules/11.viewJob";
 

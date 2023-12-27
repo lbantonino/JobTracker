@@ -1,0 +1,121 @@
+.form-signup{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    label{
+        color: transparent;
+    }
+    input{
+        outline: none;
+        border: none;
+        width: 275px;
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid $blue;
+        color: $white;
+    }
+    input::placeholder{
+        color: $blue;
+        font-weight: 300;
+        -webkit-text-fill-color: $blue;
+    }
+    input:focus{
+        border: 1px solid $bluehover;
+    }
+    input:focus::placeholder{
+        color: $bluehover;
+        -webkit-text-fill-color: $bluehover;
+    }
+    button{
+        width: 275px;
+        height: 50px;
+        background-color: $blue;
+        border-radius: 5px;
+        border: none;
+        color: $white;
+        font-weight: 300;
+
+    }
+    button:hover{
+        background-color: $bluehover;
+        cursor: pointer;
+    }
+    .notregistered{
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 100;
+        a{
+            color: $blue;
+            font-weight: 300;
+            text-decoration: underline;
+            &:hover{
+                color: $bluehover;
+            }
+        }
+    }
+
+
+
+    
+    @include phone-portrait{
+        height: 77.5vh;
+    }
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+        input{
+            height: 50px;
+        }
+    }
+    @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+        height: inherit;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        input{
+            outline: none;
+            border: none;
+            width: 275px;
+            height: 50px;
+            padding: 0 10px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 1px solid $blue;
+            color: $white;
+        }
+    }
+    @include tablet-portrait{
+        height: 80vh;
+    }
+    @include tablet-landscape{
+        height: inherit;
+    }
+    @include desktop{
+        height: 80vh;
+    }
+}
+
+.footer-signup{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+    height: auto;
+    bottom: 0;
+    height: 10vh;
+    div{
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+    @media screen and (min-width: 320px) and (max-width: 374px){
+        align-items: end;
+        padding-bottom: 7px;
+    }
+    @media screen and (min-width: 1020px) and (max-width: 1024px) and (orientation: landscape) {
+        align-items: end;
+        padding-bottom: 7px;
+        height: 13vh;
+    }
+}

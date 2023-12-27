@@ -7,9 +7,8 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="connected">
     <h1 class="logo"><a href="/">JOB<span>TRACKER</span></a></h1>
-    <h1 class="create-job">Create job</h1>
     <ul>
       <% if (user) { %>
         <div class="pp">
@@ -31,50 +30,42 @@
     </ul>
   </nav>
 
+  <div div class="form-container">
+    <a href="/list-jobs" class="back">Back</a>
+    <a href="/list-jobs" class="arrow-link">&larr;</a>
+    <h1 class="create-job">Create job</h1>
+    <h3 class="desktop-h3">Employer's contact</h3>
+    <form class="form-create-job">
 
-  <form class="form-create">
-    <a href="/" class="arrow-link">&larr;</a>
-    <h3>Employer's contact</h3>
-    <div class="info-job">
-      <div class="info1">
-        <label for="jobTitle">Job title</label>
+      <div class="job-description">
         <input type="text" name="jobTitle" required placeholder="Job title">
         <div class="jobTitle error"></div>
-
-        <label for="company">Company</label>
         <input type="text" name="company" required placeholder="Company">
         <div class="company error"></div>
-
-        <label for="website">Website</label>
         <input type="text" name="website" required placeholder="Website">
         <div class="website error"></div>
       </div>
-      <div class="info2">
-
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Name">
 
 
-        <label for="email">Email of contact</label>
+      <h3>Employer's contact</h3>
+      <div class="job-detail">
+        <input type="text" name="name" placeholder="Name" class="name-input">
+        <div class="name error"></div>
         <input type="text" name="email" placeholder="Email address">
         <div class="email error"></div>
-
-        <label for="phone">Phone</label>
-        <input type="text" name="phone" placeholder="Phone">
-
-        <label for="adress">Adress</label>
-        <input type="text" name="adress" placeholder="Address">
+        <input type="text" name="phone" placeholder="Phone" class="phone-input">
+        <div class="phone error"></div>
+        <input type="text" name="adress" placeholder="Address" class="address-input">
+        <div class="address error"></div>
       </div>
-      <div class="info3">
-        <label for="origin">Origin</label>
+
+
+      <div class="job-more-detail">
         <select name="origin" id="origin" required>
           <option value="spontaneous">Spontaneous application</option>
           <option value="job offer">Job offer</option>
         </select>
         <div class="origin error"></div>
-
-
-        <label for="status">Status</label>
         <select name="status" id="status" required>
           <option value="interested">Interested</option>
           <option value="cv sent">CV sent</option>
@@ -82,104 +73,108 @@
           <option value="interview">Interview</option>
         </select>
         <div class="status error"></div>
-
-        <label for="comments">Comments</label>
         <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+        <div class="comments error"></div>
       </div>
+
+      <div class="btn-submit">
+        <button>Save</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer-create-job">
+    <div>
+      © Copyright 2023 - Antonino Lo Bianco
     </div>
-    <div class="btn-submit">
-      <button>Save</button>
-    </div>
-  </form>
+  </footer>
 
-  <%- include('partials/footer'); -%>
+  <script>
 
-    <script>
+    const circle = document.querySelector('.circle-2');
+    circle.addEventListener('click', () => {
+      location.href = '/user-profile';
+    });
+    const form = document.querySelector('form');
+    const jobTitleError = document.querySelector('.jobTitle.error');
+    const websiteError = document.querySelector('.website.error');
+    const emailError = document.querySelector('.email.error');
+    const originError = document.querySelector('.origin.error');
+    const statusError = document.querySelector('.status.error');
 
-      const circle = document.querySelector('.circle-2');
-      circle.addEventListener('click', () => {
-        location.href = '/user-profile';
-      });
-      const form = document.querySelector('form');
-      const jobTitleError = document.querySelector('.jobTitle.error');
-      const websiteError = document.querySelector('.website.error');
-      const emailError = document.querySelector('.email.error');
-      const originError = document.querySelector('.origin.error');
-      const statusError = document.querySelector('.status.error');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+      // reset errors
+      jobTitleError.textContent = '';
+      websiteError.textContent = '';
+      emailError.textContent = '';
+      originError.textContent = '';
+      statusError.textContent = '';
 
-        // reset errors
-        jobTitleError.textContent = '';
-        websiteError.textContent = '';
-        emailError.textContent = '';
-        originError.textContent = '';
-        statusError.textContent = '';
+      // get values
+      const jobTitle = form.jobTitle.value;
+      const website = form.website.value;
+      const company = form.company.value;
+      const nameContact = form.name.value;
+      const emailContact = form.email.value;
+      const phone = form.phone.value;
+      const Address = form.adress.value;
+      const origin = form.origin.value;
+      const statusJob = form.status.value;
+      const comments = form.comments.value;
+      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-        // get values
-        const jobTitle = form.jobTitle.value;
-        const website = form.website.value;
-        const company = form.company.value;
-        const nameContact = form.name.value;
-        const emailContact = form.email.value;
-        const phone = form.phone.value;
-        const Address = form.adress.value;
-        const origin = form.origin.value;
-        const statusJob = form.status.value;
-        const comments = form.comments.value;
-        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      if (jobTitle === '' || website === '') {
+        jobTitleError.textContent = 'Please fill out the job title';
+        websiteError.textContent = 'Please fill out the website';
+        emailError.textContent = 'Please enter a valid email';
+        originError.textContent = 'Please fill out the origin';
+        statusError.textContent = 'Please fill out the status';
 
-        if (jobTitle === '' || website === '') {
-          jobTitleError.textContent = 'Please fill out the job title';
-          websiteError.textContent = 'Please fill out the website';
-          emailError.textContent = 'Please enter a valid email';
-          originError.textContent = 'Please fill out the origin';
-          statusError.textContent = 'Please fill out the status';
+      }
+      if (emailContact && !emailRegex.test(emailContact)) {
+        emailError.textContent = 'Please enter a valid email';
+      }
+      else {
+        let infoJob = {
+          jobTitle,
+          website,
+          company,
+          nameContact,
+          emailContact,
+          phone,
+          Address,
+          origin,
+          statusJob,
+          comments
+        }
+        console.log(infoJob);
+
+        try {
+          const res = await fetch('/create-job', {
+            method: 'POST',
+            body: JSON.stringify(infoJob),
+            headers: { 'Content-Type': 'application/json' }
+          });
+          const data = await res.json();
+          console.log(data);
+          if (data.errors) {
+            jobTitleError.textContent = data.errors.jobTitle;
+            websiteError.textContent = data.errors.website;
+            emailError.textContent = data.errors.email;
+            originError.textContent = data.errors.origin;
+            statusError.textContent = data.errors.status;
+            console.log(data.errors.email);
+          }
+          else {
+            location.assign('/list-jobs');
+          }
 
         }
-        if (emailContact && !emailRegex.test(emailContact)) {
-          emailError.textContent = 'Please enter a valid email';
+        catch (err) {
+          console.log(err);
         }
-        else {
-          let infoJob = {
-            jobTitle,
-            website,
-            company,
-            nameContact,
-            emailContact,
-            phone,
-            Address,
-            origin,
-            statusJob,
-            comments
-          }
-          console.log(infoJob);
-
-          try {
-            const res = await fetch('/create-job', {
-              method: 'POST',
-              body: JSON.stringify(infoJob),
-              headers: { 'Content-Type': 'application/json' }
-            });
-            const data = await res.json();
-            console.log(data);
-            if (data.errors) {
-              jobTitleError.textContent = data.errors.jobTitle;
-              websiteError.textContent = data.errors.website;
-              emailError.textContent = data.errors.email;
-              originError.textContent = data.errors.origin;
-              statusError.textContent = data.errors.status;
-              console.log(data.errors.email);
-            }
-            else {
-              location.assign('/list-jobs');
-            }
-
-          }
-          catch (err) {
-            console.log(err);
-          }
-        }
-      });
-    </script>
+      }
+    });
+  </script>

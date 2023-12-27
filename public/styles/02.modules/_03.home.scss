@@ -1,0 +1,290 @@
+.disconnected {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include phone-portrait {
+        height: 12.5vh;
+    }
+    @include phone-landscape {
+        height: 20vh;
+        padding: 20px 0;
+    }
+    @include tablet-portrait {
+        height: 10vh;
+    }   
+    @include tablet-landscape {
+        height: 20vh;
+        padding: 20px 0;
+    }
+    @include desktop {
+        height: 10vh;
+    }
+    .logo1{
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        span{
+            color: $blue;
+        }
+    }
+}
+.connected{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        .profile-user{
+            text-decoration: underline;
+            font-weight: 300;
+            a:hover{
+                color: $bluehover;
+                cursor: pointer;
+            }
+        }
+        .profile-user:hover{
+            cursor: pointer;
+            color: $bluehover;
+        }
+    }
+    @include phone-portrait {
+        height: 12.5vh;
+        padding: 0 20px;
+        .profile-user{
+            display: none;
+        }
+        .circle{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 50%;
+            a{
+                color: $blue;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+        .circle:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    @include phone-landscape {
+        height: 20vh;
+        padding: 0px 20px;
+        .circle{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 50%;
+            a{
+                color: $blue;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+        .circle:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    @include tablet-portrait {
+        height: 10vh;
+        padding: 0 30px;
+        .circle{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 50%;
+            a{
+                color: $blue;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+        .circle:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }   
+    @include tablet-landscape {
+        height: 18vh;
+        padding: 0 40px;
+        .circle{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 50%;
+            a{
+                color: $blue;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+        .circle:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    @include desktop {
+        height: 10vh;
+        padding: 0 40px;
+        .circle{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 50%;
+            a{
+                color: $blue;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+        }
+        .circle:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    .logo{
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        span{
+            color: $blue;
+        }
+    }
+}
+.headings-disconnected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    @include phone-portrait {
+   height: 75vh;
+    }
+    @include phone-landscape {
+        height: 65vh;
+    }
+    @include tablet-portrait {
+        height: 80vh;
+    }   
+    @include tablet-landscape {
+        height: 63vh;
+    }
+    @include desktop {
+        height: 80vh;
+    }
+    .btn-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include phone-portrait {
+            gap: 20px;
+        }
+        @include phone-landscape {
+            gap: 20px;
+        }
+        @include tablet-portrait {
+            gap: 30px;;
+        }
+        @include tablet-landscape {
+            gap: 30px;
+        }
+        @include desktop {
+            gap: 30px;
+        }
+    }
+    .btnlog{
+        width: 175px;
+        height: 60px;
+        background-color: $blue;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+    }
+    .btnlog:hover{
+        background-color: $bluehover;
+    }
+}
+
+.headings-connected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    @include phone-portrait {
+        height: 77.5vh;
+    }
+    @include phone-landscape {
+        height: 65vh;
+    }
+    @include tablet-portrait {
+        height: 80vh;
+    }   
+    @include tablet-landscape {
+        height: 80vh;
+    }
+    @include desktop {
+        height: 80vh;
+    }
+    .btn-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include phone-portrait {
+            gap: 20px;
+        }
+        @include phone-landscape {
+            gap: 20px;
+        }
+        @include tablet-portrait {
+            gap: 30px;;
+        }
+        @include tablet-landscape {
+            gap: 30px;
+        }
+        @include desktop {
+            gap: 30px;
+        }
+    }
+    .btnlog{
+        width: 175px;
+        height: 60px;
+        background-color: $blue;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+    }
+    .btnlog:hover{
+        background-color: $bluehover;
+    }
+}
+
+

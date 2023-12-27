@@ -3,22 +3,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  body {
-    height: 100vh;
-    width: 100vw;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    background-color: #03050c;
-    position: relative;
-    @media screen and (max-width: 1024px) {
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    }
-  }
 
   ul{
     list-style: none;
@@ -26,7 +10,6 @@
 
 img {
     width: 100%;
-    border-radius: 10px;
   }
   
   a {
@@ -36,7 +19,7 @@ img {
 
   .error{
     margin-top: 3px;
-    color: #66b0ff;
+    color: #ff9fe6;
     font-size: 13px;
     font-weight: 100;
   }
