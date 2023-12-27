@@ -1,3 +1,162 @@
+@include phone-portrait{
+    section{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 80.5vh;
+        .arrow-link{
+            display: none;
+        }
+        .back{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            font-weight: 300;
+            font-size: 1.2rem;
+            border-radius: 5px;
+
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+@include phone-landscape{
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .arrow-link{
+            display: none;
+        }
+        .back{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            font-weight: 300;
+            font-size: 1.2rem;
+            border-radius: 5px;
+
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+@include tablet-portrait{
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 83vh;
+        .arrow-link{
+            display: none;
+        }
+        .back{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25vw;
+            height: 50px;
+            background-color: $blue;
+            color: $white;
+            font-weight: 300;
+            font-size: 1.2rem;
+            border-radius: 5px;
+
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        .form-signup {
+            .update-profile-h2{
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+@include tablet-landscape{
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .arrow-link{
+            display: none;
+        }
+        .back{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            font-weight: 300;
+            font-size: 1.2rem;
+            border-radius: 5px;
+
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        .form-signup {
+            .update-profile-h2{
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@include desktop {
+    section {
+        .back{
+            display: none;
+        }
+        .arrow-link{
+            position: absolute;
+            left: 43px;
+            top: 45%;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            border: 1px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            line-height: 45px;
+        }
+        .arrow-link:hover{
+            border: 1px solid $bluehover ;
+            color: $bluehover;
+        }
+        .form-signup {
+            .update-profile-h2{
+                transform: translateY(-40px);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
 .form-signup{
     width: 100vw;
     display: flex;
@@ -59,11 +218,28 @@
         }
     }
 
-
+    @include phone-portrait{
+        .update-profile-h2{
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+    }
+    @include phone-landscape{
+        .update-profile-h2{
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+    }
 
     
     @include phone-portrait{
-        height: 77.5vh;
+        min-height: 77.5vh;  
     }
     @media screen and (min-width: 320px) and (max-width: 374px) {
         input{
@@ -71,7 +247,7 @@
         }
     }
     @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
-        height: inherit;
+        min-height: inherit;
         margin-top: 30px;
         margin-bottom: 30px;
         input{
@@ -87,13 +263,13 @@
         }
     }
     @include tablet-portrait{
-        height: 80vh;
+        min-height: 80vh;
     }
     @include tablet-landscape{
-        height: inherit;
+        min-height: inherit;
     }
     @include desktop{
-        height: 80vh;
+        min-height: 80vh;
     }
 }
 

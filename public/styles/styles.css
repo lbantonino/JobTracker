@@ -571,6 +571,150 @@ body {
   font-weight: 100;
 }
 
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80.5vh;
+  }
+  section .arrow-link {
+    display: none;
+  }
+  section .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 40px;
+    background-color: #622ebc;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  section .back a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  section .arrow-link {
+    display: none;
+  }
+  section .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 40px;
+    background-color: #622ebc;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  section .back a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 83vh;
+  }
+  section .arrow-link {
+    display: none;
+  }
+  section .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 50px;
+    background-color: #622ebc;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  section .back a {
+    color: #fff;
+    text-decoration: none;
+  }
+  section .form-signup .update-profile-h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  section .arrow-link {
+    display: none;
+  }
+  section .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 40px;
+    background-color: #622ebc;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  section .back a {
+    color: #fff;
+    text-decoration: none;
+  }
+  section .form-signup .update-profile-h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .back {
+    display: none;
+  }
+  section .arrow-link {
+    position: absolute;
+    left: 43px;
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    line-height: 45px;
+  }
+  section .arrow-link:hover {
+    border: 1px solid #9686ff;
+    color: #9686ff;
+  }
+  section .form-signup .update-profile-h2 {
+    transform: translateY(-40px);
+    text-transform: uppercase;
+  }
+}
 .form-signup {
   width: 100vw;
   display: flex;
@@ -632,8 +776,26 @@ body {
   color: #9686ff;
 }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+  .form-signup .update-profile-h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .form-signup .update-profile-h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   .form-signup {
-    height: 77.5vh;
+    min-height: 77.5vh;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -643,7 +805,7 @@ body {
 }
 @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
   .form-signup {
-    height: inherit;
+    min-height: inherit;
     margin-top: 30px;
     margin-bottom: 30px;
   }
@@ -661,17 +823,17 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .form-signup {
-    height: 80vh;
+    min-height: 80vh;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .form-signup {
-    height: inherit;
+    min-height: inherit;
   }
 }
 @media only screen and (min-width: 1200px) {
   .form-signup {
-    height: 80vh;
+    min-height: 80vh;
   }
 }
 
@@ -2853,6 +3015,13 @@ body {
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   .footer-userprofile {
     padding-bottom: 13px;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .footer-userprofile {
+    padding: 0px;
+    height: 4vh;
+    align-items: center;
   }
 }
 

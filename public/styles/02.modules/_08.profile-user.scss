@@ -527,4 +527,10 @@
     @include phone-landscape{
         padding-bottom: 13px;
     }
+    @include phone-portrait{
+        padding: 0px;
+        height: 4vh;
+        align-items: center;
+    }
 }
+
