@@ -294,6 +294,9 @@
         padding-bottom: 7px;
         height: 13vh;
     }
+    @include phone-landscape{
+            transform: translateX(10px)
+    }
     @include tablet-landscape {
             transform: translateX(10px);
     }

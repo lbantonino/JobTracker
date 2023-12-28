@@ -98,6 +98,9 @@
          @include tablet-landscape{
             transform: translateX(10px);
         }
+        @include phone-landscape{
+            transform: translateX(10px);
+        }
     }
 
 }
