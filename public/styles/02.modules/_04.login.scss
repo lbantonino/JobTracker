@@ -86,21 +86,14 @@
 .footer-login{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     padding-bottom: 10px;
-    height: auto;
-    bottom: 0;
     height: 10vh;
     position: relative;
+    bottom: 0;
     div{
         font-size: 0.8rem;
         font-weight: 100;
-         @include tablet-landscape{
-            transform: translateX(10px);
-        }
-        @include phone-landscape{
-            transform: translateX(10px);
-        }
     }
 
 }
