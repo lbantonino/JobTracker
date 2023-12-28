@@ -565,10 +565,16 @@ body {
   height: auto;
   bottom: 0;
   height: 10vh;
+  position: relative;
 }
 .footer-login div {
   font-size: 0.8rem;
   font-weight: 100;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .footer-login div {
+    transform: translateX(10px);
+  }
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
@@ -861,6 +867,11 @@ body {
     align-items: end;
     padding-bottom: 7px;
     height: 13vh;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .footer-signup {
+    transform: translateX(10px);
   }
 }
 
@@ -1525,6 +1536,10 @@ body {
   .footer-list-jobs {
     padding-bottom: 13px;
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 1200px) {

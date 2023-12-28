@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 @include desktop {
     .form-container {
         width: 100vw;

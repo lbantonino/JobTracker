@@ -91,8 +91,13 @@
     height: auto;
     bottom: 0;
     height: 10vh;
+    position: relative;
     div{
         font-size: 0.8rem;
         font-weight: 100;
+         @include tablet-landscape{
+            transform: translateX(10px);
+        }
     }
+
 }
