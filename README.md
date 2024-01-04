@@ -11,7 +11,12 @@ https://job-tracker-rho.vercel.app/
 
 Here are some demos...
 
+<br>
+<br>
+
 ---
+<br>
+<br>
 
 ## DESKTOP
 
@@ -79,4 +84,98 @@ Here are some demos...
 
 <p align="center">
     <img src="pictures/mobile (8).png" width="550">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (10).png" width="550">
+</p>
+
+<br>
+<br>
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+## MOBILE
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (11).png" width="250">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (12).png" width="250">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (13).png" width="250">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (14).png" width="250">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (15).png" width="250">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (17).png" width="250">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (16).png" width="250">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (18).png" width="250">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (19).png" width="250">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (20).png" width="250">
 </p>
