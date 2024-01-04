@@ -1,2 +1,82 @@
-# mah-search
-Search jobs application
+# JOBTRACKER
+
+---
+
+As part of a BACKEND project, I developed a web application to manage job and work placement searches. This application uses CRUD concept (Create, Read, Update and Delete). It also uses JWT tokens to authenticate users. 
+
+For this project, the aim wasn't really to focus on the design of the application, but on how well it worked. I've created an application that allows me to list all my job and work placement searches.  The application is linked to my MongoDB database. On this purely backend project, my best friend was none other than POSTMAN. 
+
+I'll leave you the link to the application here : 
+https://job-tracker-rho.vercel.app/
+
+Here are some demos...
+
+---
+
+## DESKTOP
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile.png" width="550">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (1).png" width="550">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (2).png" width="550">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (3).png" width="550">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (5).png" width="550">
+</p>
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (9).png" width="550">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (6).png" width="550">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (7).png" width="550">
+</p>
+
+
+<br>
+<br>
+
+<p align="center">
+    <img src="pictures/mobile (8).png" width="550">
+</p>
