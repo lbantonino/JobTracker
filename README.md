@@ -15,10 +15,9 @@ https://job-tracker-rho.vercel.app/
 
 
 ---
-<br>
-<br>
 
-## DESKTOP
+
+<h2 align="center">DESKTOP</h2>
 
 <br>
 <br>
@@ -104,7 +103,7 @@ https://job-tracker-rho.vercel.app/
 <br>
 <br>
 
-## MOBILE
+<h2 align="center">MOBILE</h2>
 
 <br>
 <br>
