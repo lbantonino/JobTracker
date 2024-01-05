@@ -9,7 +9,9 @@ For this project, the aim wasn't really to focus on the design of the applicatio
 I'll leave you the link to the application here : 
 https://job-tracker-rho.vercel.app/
 
-Here are some demos...
+- 📫 MAIL:  **antonino.lobianco@outlook.com**
+  
+##### Here are some demos...
 
 <br>
 <br>
