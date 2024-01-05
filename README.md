@@ -13,8 +13,6 @@ https://job-tracker-rho.vercel.app/
   
 ##### Here are some demos...
 
-<br>
-<br>
 
 ---
 <br>
