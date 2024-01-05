@@ -6,10 +6,19 @@ As part of a BACKEND project, I developed a web application to manage job and wo
 
 For this project, the aim wasn't really to focus on the design of the application, but on how well it worked. I've created an application that allows me to list all my job and work placement searches.  The application is linked to my MongoDB database. On this purely backend project, my best friend was none other than POSTMAN. 
 
-I'll leave you the link to the application here : 
-https://job-tracker-rho.vercel.app/
+<br>
 
-- 📫 MAIL:  **antonino.lobianco@outlook.com**
+🔗 **JOBTRACKER** : **https://job-tracker-rho.vercel.app/**
+
+✉️ MAIL:  **antonino.lobianco@outlook.com**
+  
+🟦 LINKEDIN : **https://www.linkedin.com/in/antonino-lo-bianco-605765188/**
+
+⬛️ DEV : **[https://www.linkedin.com/in/antonino-lo-bianco-605765188/](https://dev.to/lbantonino)**
+
+💻 PORTFOLIO: **https://lbantonino.vercel.app/**
+
+<br>
   
 ##### Here are some demos...
 
